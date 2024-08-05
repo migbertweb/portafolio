@@ -1,0 +1,8 @@
+[2024-08-05 15:56:59] phpactor.WARNING: The process was killed {"channel":"LSP"} []
+[2024-08-05 15:56:59] phpactor.WARNING: Killed process "15543" ('/usr/bin/php8.2' '/home/migbert/.local/share/nvim/mason/packages/phpactor/phpactor.phar' 'language-server:diagnostics' '--uri=file:///home/migbert/proyectos/php/app_laravel1/laravel/config/app.php' '--config-extra={"worse_reflection.enable_context_location": false}') because it lived longer than 5s {"channel":"LSP"} []
+[2024-08-05 16:05:59] phpactor.CRITICAL: Waited "2500" milliseconds after shutdown request for exit notification but did not get one so I'm self destructing. {"channel":"LSP"} []
+[2024-08-05 17:01:07] phpactor.WARNING: The process was killed {"channel":"LSP"} []
+[2024-08-05 17:01:07] phpactor.WARNING: Killed process "60835" ('/usr/bin/php8.2' '/home/migbert/.local/share/nvim/mason/packages/phpactor/phpactor.phar' 'language-server:diagnostics' '--uri=file:///home/migbert/proyectos/php/app_laravel1/laravel/config/app.php' '--config-extra={"worse_reflection.enable_context_location": false}') because it lived longer than 5s {"channel":"LSP"} []
+[2024-08-05 17:01:11] phpactor.CRITICAL: Waited "2500" milliseconds after shutdown request for exit notification but did not get one so I'm self destructing. {"channel":"LSP"} []
+[2024-08-05 17:01:11] phpactor.WARNING: The process was killed {"channel":"LSP"} []
+[2024-08-05 17:03:23] phpactor.CRITICAL: Waited "2500" milliseconds after shutdown request for exit notification but did not get one so I'm self destructing. {"channel":"LSP"} []
