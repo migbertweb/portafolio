@@ -34,7 +34,7 @@ jobs:
           script: |
             cd /www/laravel
             cp .env.example .env
-            docker exec app bash -c "composer install --no-dev --no-interaction --no-progress -a"
+            docker exec app bash -c "composer install --no-dev --no-progress -a"
             docker exec app bash -c "npm install"
             docker exec app bash -c "npm build"
             docker exec app bash -c "php artisan migrate --force"
