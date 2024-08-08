@@ -20,8 +20,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
-          source: ${{ steps.changed-files.outputs.all_changed_files }}
-          target: "/www/laravel"
+          source: "./"
+          target: "/home/migbert/www/laravel"
 
       - name: Ejecutar comandos remoto via SSH
         uses: appleboy/ssh-action@v1.0.3
@@ -33,8 +33,9 @@ jobs:
           script_stop: true
           script: |
             cd /www/laravel
-            docker exec -it app bash -c "composer install --no-dev"
-            docker exec -it app bash -c "npm install --production"
-            docker exec -it app bash -c "php artisan migrate --force"
-            docker exec -it app bash -c "php artisan optimize:clear"
-            docker exec -it app bash -c "php artisan optimize"
+            cp env.example .env
+            docker exec app bash -c "composer install --no-dev --no-interaction --no-progress -a"
+            docker exec app bash -c "npm install"
+            docker exec app bash -c "npm build"
+            docker exec app bash -c "php artisan migrate --force"
+            docker exec app bash -c "php artisan optimize"
