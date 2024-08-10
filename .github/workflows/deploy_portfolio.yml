@@ -32,7 +32,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script_stop: true
           script: |
-            cd /www/laravel
+            cd www/laravel/
             cp .env.example .env
             docker exec app bash -c "composer install --no-dev --no-progress -a"
             docker exec app bash -c "npm install"
