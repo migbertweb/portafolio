@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Chequeando el Codigo
         uses: actions/checkout@v4
 
       - name: Copiar archivos via SSH
@@ -37,7 +37,7 @@ jobs:
             docker exec app bash -c "composer install --no-dev --no-progress -a"
             docker exec app bash -c "npm install"
             docker exec app bash -c "npm run build"
-            docker exec app bash -c "php artisan migrate:fresh --seed"
+            docker exec app bash -c "php artisan migrate:fresh --force --seed"
             docker exec app bash -c "php artisan storage:link"
             docker exec app bash -c "php artisan lang:update"
             docker exec app bash -c "php artisan optimize"
