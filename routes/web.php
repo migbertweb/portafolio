@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
+Route::view('admin', 'admin')
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('admin');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])

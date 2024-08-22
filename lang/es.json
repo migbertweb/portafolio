@@ -11,6 +11,7 @@
     "Connection Timed Out": "Tiempo de conexión agotado",
     "Continue": "Continuar",
     "Created": "Creado",
+    "Dashboard": "Panel Administrativo",
     "Expectation Failed": "Expectativa fallida",
     "Failed Dependency": "Dependencia fallida",
     "Forbidden": "Prohibido",
@@ -26,6 +27,7 @@
     "Length Required": "Longitud requerida",
     "Locked": "Bloqueado",
     "Log in": "Acceder",
+    "Log Out": "Salir",
     "Loop Detected": "Bucle detectado",
     "Maintenance Mode": "Modo de mantenimiento",
     "Method Not Allowed": "Método no permitido",
@@ -52,6 +54,7 @@
     "Precondition Failed": "Error de condición previa",
     "Precondition Required": "Precondición requerida",
     "Processing": "Procesando",
+    "Profile": "Perfil",
     "Proxy Authentication Required": "Se requiere autenticación proxy",
     "Railgun Error": "Error de cañón de riel",
     "Range Not Satisfiable": "Rango no satisfactorio",
@@ -75,5 +78,6 @@
     "URI Too Long": "URI demasiado largo",
     "Use Proxy": "Usa proxy",
     "Variant Also Negotiates": "Variante También Negocia",
-    "Web Server is Down": "El servidor web está caído"
+    "Web Server is Down": "El servidor web está caído",
+    "You're logged in!": "¡Has iniciado sesión!"
 }
