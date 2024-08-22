@@ -15,6 +15,14 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'cust-tierra': '#908B92',
+                'cust-arena': '#BFB7B5',
+                'cust-cima': '#E8E5E5',
+                'cust-neblina': '#E3F5F9',
+                'cust-nube': '#CBE2E7',
+                'cust-cielo': '#0791B1',
+            },
         },
     },
 
