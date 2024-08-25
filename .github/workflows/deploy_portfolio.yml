@@ -38,5 +38,4 @@ jobs:
             docker exec app bash -c "npm install"
             docker exec app bash -c "npm run build"
             docker exec app bash -c "php artisan migrate --force"
-            docker exec app bash -c "php artisan lang:update"
             docker exec app bash -c "php artisan optimize"
