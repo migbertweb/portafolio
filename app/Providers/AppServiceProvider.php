@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Middleware\LocaleMiddleware;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,5 +23,7 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('production')) {
             \URL::forceScheme('https');
         }
+        $this->app->make(\Illuminate\Routing\Router::class)
+            ->pushMiddlewareToGroup('web', LocaleMiddleware::class);
     }
 }
