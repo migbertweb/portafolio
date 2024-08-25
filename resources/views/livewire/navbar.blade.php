@@ -8,44 +8,51 @@
                 <img src="{{ asset('images/logos/logo-prog.svg') }}" alt="logo" height="30" width="30">
             </button>
         </div>
-        {{-- boton para cambio de idioma --}}
-        <div x-data="{ open: false }" class="flex item-center">
-            <!-- Botón para abrir el menú -->
-            <button @click="open = !open" class="flex items-center p-2 bg-gray-200 rounded-md">
-                <span class="mr-2">
-                    <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`" alt="Idioma actual"
-                        class="w-5 h-5">
-                </span>
-                <span
-                    x-text="window.localStorage.getItem('locale') ? window.localStorage.getItem('locale').toUpperCase() : 'ES'"></span>
-            </button>
 
-            <!-- Menú desplegable -->
-            <div x-show="open" @click.away="open = false" class="absolute mt-2 w-40 bg-white rounded-md shadow-lg">
-                <ul>
-                    <li>
-                        <a href="#" @click="changeLocale('es')" class="flex items-center p-2 hover:bg-gray-100">
-                            <img src="/images/flags/es.svg" alt="España" class="w-5 h-5 mr-2">
-                            <span>ES</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" @click="changeLocale('en')" class="flex items-center p-2 hover:bg-gray-100">
-                            <img src="/images/flags/en.svg" alt="Inglaterra" class="w-5 h-5 mr-2">
-                            <span>EN</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" @click="changeLocale('pt')" class="flex items-center p-2 hover:bg-gray-100">
-                            <img src="/images/flags/pt.svg" alt="Brasil" class="w-5 h-5 mr-2">
-                            <span>PT</span>
-                        </a>
-                    </li>
-                </ul>
+        {{-- Botones derechos --}}
+        <div class="flex items-center space-x-2">
+            {{-- Menu para cambio de idioma --}}
+            <div x-data="{ open: false }" class="relative">
+                <!-- Botón para abrir el menú -->
+                <button @click="open = !open"
+                    class="flex items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-300 shadow-xl shadow-gray-500 focus:outline-none">
+                    <span class="mr-2">
+                        <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`"
+                            alt="Idioma actual" class="w-5 h-5">
+                    </span>
+                    <span
+                        x-text="window.localStorage.getItem('locale') ? window.localStorage.getItem('locale').toUpperCase() : 'ES'"></span>
+                </button>
+
+                <!-- Menú desplegable -->
+                <div x-show="open" @click.away="open = false"
+                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-200 shadow-lg shadow-gray-500 focus:outline-none">
+                    <ul>
+                        <li>
+                            <a href="#" @click="changeLocale('es')"
+                                class="flex items-center p-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                <img src="/images/flags/es.svg" alt="España" class="w-5 h-5 mr-2">
+                                <span>ES</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" @click="changeLocale('en')"
+                                class="flex items-center p-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                <img src="/images/flags/en.svg" alt="Inglaterra" class="w-5 h-5 mr-2">
+                                <span>EN</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" @click="changeLocale('pt')"
+                                class="flex items-center p-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                <img src="/images/flags/pt.svg" alt="Brasil" class="w-5 h-5 mr-2">
+                                <span>PT</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        {{-- Boton para cambio de tema --}}
-        <div class="flex items-center space-x-4">
+            {{-- -- Boton para cambio de tema -- --}}
             <div class="relative">
                 <!-- Botón para modo oscuro -->
                 <button id="dark-theme-toggle"
