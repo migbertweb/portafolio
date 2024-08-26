@@ -15,7 +15,7 @@
             <div x-data="{ open: false }" class="relative">
                 <!-- Botón para abrir el menú -->
                 <button @click="open = !open"
-                    class="flex items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-300 shadow-xl shadow-gray-500 focus:outline-none">
+                    class="flex items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-300 shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <span class="mr-2">
                         <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`"
                             alt="Idioma actual" class="w-5 h-5">
@@ -56,7 +56,7 @@
             <div class="relative">
                 <!-- Botón para modo oscuro -->
                 <button id="dark-theme-toggle"
-                    class="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full shadow-lg focus:outline-none hidden">
+                    class="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full shadow-lg dark:shadow-gray-900 focus:outline-none hidden">
                     <!-- Icono de media luna -->
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
