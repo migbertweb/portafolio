@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "EncodeSans";
+    src: url("/fonts/EncodeSans.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
