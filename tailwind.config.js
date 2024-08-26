@@ -14,22 +14,25 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                encode: ['EncodeSans', 'sans-serif'], // Fuente local
             },
             colors: {
-                // paleta color tierra
-                'cust-tierra': '#908B92',
-                'cust-arena': '#BFB7B5',
-                'cust-cima': '#E8E5E5',
-                'cust-neblina': '#E3F5F9',
-                'cust-nube': '#CBE2E7',
-                'cust-cielo': '#0791B1',
-                // paletaoceano oscuro
-                'ocean-negro': '#05161A',
-                'ocean-oscuro': '#072E33',
-                'ocean-med': '#0C7075',
-                'ocean-bajo': '#0F969C',
-                'ocean-claro': '#6DA5C0',
-                'ocean-fondo': '#294D61',
+                ocean: {
+                    lightest: '#294D61',
+                    lighter: '#6DA5C0',
+                    light: '#0F969C',
+                    DEFAULT: '#0C7075', // Este será el color por defecto (sin sufijo)
+                    dark: '#072E33',
+                    darker: '#05161A',
+                },
+                everest: {
+                    lightest: '#0791B1',
+                    lighter: '#CBE2E7',
+                    light: '#E3F5F9',
+                    DEFAULT: '#E8E5E5', // Este será el color por defecto (sin sufijo)
+                    dark: '#BFB7B5',
+                    darker: '#908B92',
+                },
             },
         },
     },
