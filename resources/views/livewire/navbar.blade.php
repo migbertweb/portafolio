@@ -12,9 +12,9 @@
         {{-- Botones derechos --}}
         <div class="flex items-center space-x-2">
             {{-- Menu para cambio de idioma --}}
-            <div x-data="{ open: false }" class="relative">
+            <div x-data="{ open: false, tooltip: false }" class="relative">
                 <!-- Botón para abrir el menú -->
-                <button @click="open = !open"
+                <button @click="open = !open" @mouseover="tooltip = true" @mouseleave="tooltip = false"
                     class="flex items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-300 shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <span class="mr-2">
                         <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`"
@@ -23,7 +23,10 @@
                     <span
                         x-text="window.localStorage.getItem('locale') ? window.localStorage.getItem('locale').toUpperCase() : 'ES'"></span>
                 </button>
-
+                <!-- Tooltip -->
+                <div x-show="tooltip" class="absolute top-full mt-1 mr-1 bg-black text-white text-xs rounded py-1 px-2">
+                    Cambiar el Idioma
+                </div>
                 <!-- Menú desplegable -->
                 <div x-show="open" @click.away="open = false"
                     class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-200 shadow-lg shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
