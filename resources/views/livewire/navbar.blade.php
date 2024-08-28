@@ -26,7 +26,7 @@
 
                 <!-- Menú desplegable -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-200 shadow-lg shadow-gray-500 focus:outline-none">
+                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-200 shadow-lg shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <ul>
                         <li>
                             <a href="#" @click="changeLocale('es')"
