@@ -2,11 +2,12 @@
     class="w-full fixed top-0 left-0 z-10 bg-transparent px-6 py-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
         <!-- Logo -->
-        <div class="font-bold text-gray-900 dark:text-white">
+        <div class="font-burtons text-center text-gray-900 dark:text-white">
             <button
                 class="focus:outline-none rounded-full shadow-lg bg-white hover:bg-gray-300 p-2 dark:bg-gray-800 dark:hover:bg-gray-900 shadow-gray-500 dark:shadow-gray-900">
                 <img src="{{ asset('images/logos/logo-prog.svg') }}" alt="logo" height="30" width="30">
             </button>
+            <div class="text-sm text-gray-700 dark:text-gray-300 p-2">DevelopByMe</div>
         </div>
 
         {{-- Botones derechos --}}
