@@ -2,19 +2,20 @@
     class="w-full fixed top-0 left-0 z-10 bg-transparent px-6 py-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
         <!-- Logo -->
-        <div class="font-bold text-gray-900 dark:text-white">
+        <div class="font-burtons text-center text-gray-900 dark:text-white">
             <button
                 class="focus:outline-none rounded-full shadow-lg bg-white hover:bg-gray-300 p-2 dark:bg-gray-800 dark:hover:bg-gray-900 shadow-gray-500 dark:shadow-gray-900">
                 <img src="{{ asset('images/logos/logo-prog.svg') }}" alt="logo" height="30" width="30">
             </button>
+            <div class="text-sm text-gray-700 dark:text-gray-300 p-2">DevelopByMe</div>
         </div>
 
         {{-- Botones derechos --}}
         <div class="flex items-center space-x-2">
             {{-- Menu para cambio de idioma --}}
-            <div x-data="{ open: false }" class="relative">
+            <div x-data="{ open: false, tooltip: false }" class="relative">
                 <!-- Botón para abrir el menú -->
-                <button @click="open = !open"
+                <button @click="open = !open" @mouseover="tooltip = true" @mouseleave="tooltip = false"
                     class="flex items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-300 shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <span class="mr-2">
                         <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`"
@@ -23,10 +24,13 @@
                     <span
                         x-text="window.localStorage.getItem('locale') ? window.localStorage.getItem('locale').toUpperCase() : 'ES'"></span>
                 </button>
-
+                <!-- Tooltip -->
+                <div x-show="tooltip" class="absolute top-full mt-1 mr-1 bg-black text-white text-xs rounded py-1 px-2">
+                    Cambiar el Idioma
+                </div>
                 <!-- Menú desplegable -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-200 shadow-lg shadow-gray-500 focus:outline-none">
+                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-200 shadow-lg shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <ul>
                         <li>
                             <a href="#" @click="changeLocale('es')"
