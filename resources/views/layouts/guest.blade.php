@@ -17,9 +17,10 @@
 </head>
 
 <body class="font-encode text-gray-900 antialiased">
-    <div class="min-h-screen flex sm:justify-center items-center pt-6 sm:pt-0 bg-ocean-lighter dark:bg-ocean-main">
-        <div
-            class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+    @livewire('navbar')
+    <div
+        class="min-h-screen flex flex-col w-full pt-24 px-4 sm:justify-center items-center bg-ocean-lighter dark:bg-ocean-main">
+        <div class="w-full  px-2 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
             {{ $slot }}
         </div>
     </div>

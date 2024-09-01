@@ -20,6 +20,7 @@ export default {
                 brotherline: ['Brotherline'], // Fuente local
                 ochitylla: ['Ochitylla'], // Fuente local
             },
+
             colors: {
                 ocean: {
                     lightest: '#294D61',
