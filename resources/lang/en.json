@@ -1,4 +1,8 @@
 {
+    "title": "Web Developer Jr.",
+    "nombre": "Migbert Yanez Caña",
+    "bio": "Hi, I'm a junior web developer. Computer scientist with experience in backend and frontend web development, passionate about programming in general, looking for an opportunity that allows me to evolve my skills and use them effectively and efficiently.",
+    "resume": "Resume",
     "A Timeout Occurred": "A Timeout Occurred",
     "Accepted": "Accepted",
     "Already Reported": "Already Reported",
@@ -75,9 +79,5 @@
     "Use Proxy": "Use Proxy",
     "Variant Also Negotiates": "Variant Also Negotiates",
     "Web Server is Down": "Web Server is Down",
-    "welcome_message": "Welcome, page under construction - My Portfolio will be showing very soon",
-    "title": "Web Developer Jr.",
-    "nombre": "Migbert Yanez Caña",
-    "bio": "Hi, I'm a junior web developer. Computer scientist with experience in backend and frontend web development, passionate about programming in general, looking for an opportunity that allows me to evolve my skills and use them effectively and efficiently.",
-    "resume": "Resume"
+    "welcome_message": "Welcome, page under construction - My Portfolio will be showing very soon"
 }
