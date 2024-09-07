@@ -1,5 +1,6 @@
 {
-     "title": "Desenvolvedor Web Jr.",
+    "title": "Desenvolvedor Web Jr.",
+    "about_me": "Sobre Mim",
     "nombre": "Migbert F. Yanez Cana",
     "bio": "Olá, sou um desenvolvedor web júnior. Cientista da computação com experiência em desenvolvimento web backend e frontend, apaixonado por programação em geral, em busca de uma oportunidade que me permita evoluir minhas habilidades e aproveitá-las de forma eficaz e eficiente.",
     "resume": "Curriculo",
@@ -81,5 +82,4 @@
     "Web Server is Down": "Servidor Web Está Inativo",
     "welcome": "Ben-vindo",
     "welcome_message": "Bem vindo, página em construção - muito em breve estará mostrando Meu Portfólio"
-
 }
