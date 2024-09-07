@@ -11,7 +11,7 @@
         </p>
     </div>
     <div
-        class="py-2 flex sm:flex-col lg:flex-row sm:items-center lg:justify-center gap-3 lg:text-xl sm:text-md text-gray-800 dark:text-gray-100">
+        class="py-2 flex flex-col lg:flex-row items-center lg:justify-center gap-3 lg:text-xl sm:text-md text-gray-800 dark:text-gray-100">
         <a href="mailto:migbert.yanez@gmail.com" class="flex hover:text-everest-darker dark:hover:text-everest-lighter">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
                 class="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-500"
