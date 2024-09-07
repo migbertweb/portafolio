@@ -1,4 +1,9 @@
-<x-guest-layout>
-    @livewire('about-me')
-    @livewire('experience')
-</x-guest-layout>
+<x-layouts.index-layout>
+    @section('sidebar')
+        @livewire('about-me')
+    @endsection
+
+    @section('content')
+        @livewire('experience')
+    @endsection
+</x-layouts.index-layout>

@@ -1,6 +1,6 @@
 <div class="text-center p-6 lg:py-14">
     <div>
-        <h3 class="text-3xl py-1 dark:text-white ">Services I offer</h3>
+        <h3 class="text-3xl py-1 dark:text-white ">{{ __('about_me') }}</h3>
         <p class="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
             Since the beginning of my journey as a freelance designer and
             developer, I've done remote work for
@@ -14,10 +14,10 @@
             programming and teaching.
         </p>
     </div>
-    <div class="lg:flex gap-10">
-        <div class="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+    <div class="lg:flex gap-6">
+        <div class="text-center shadow-lg shadow-ocean-main p-4 my-6 rounded-xl dark:bg-white flex-1">
             <div clas="text-center">
-<img src="{{ asset('images/misc/design.png') }}" class="h-48 w-48">
+                <img src="{{ asset('images/misc/design.png') }}" class="h-48 w-48">
             </div>
             <h3 class="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Designs
@@ -32,7 +32,7 @@
             <p class="text-gray-800 py-1">Figma</p>
             <p class="text-gray-800 py-1">Indesign</p>
         </div>
-        <div class="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+        <div class="text-center shadow-lg shadow-ocean-main p-4 my-6 rounded-xl dark:bg-white flex-1">
             <img src={{ asset('images/misc/code.png') }} class="h-48 w-48" />
             <h3 class="text-lg font-medium pt-8 pb-2 ">
                 Code your dream project
@@ -47,7 +47,7 @@
             <p class="text-gray-800 py-1">Figma</p>
             <p class="text-gray-800 py-1">Indesign</p>
         </div>
-        <div class="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+        <div class="text-center shadow-lg shadow-ocean-main p-4 my-6 rounded-xl dark:bg-white flex-1">
             <img src={{ asset('images/misc/consulting.png') }} class="h-48 w-48" />
             <h3 class="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
             <p class="py-2">
