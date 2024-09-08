@@ -1,14 +1,6 @@
 <div x-data="{ open: false, darkMode: localStorage.getItem('darkMode') === 'true', dropdownOpen: false }" x-init="$watch('darkMode', value => localStorage.setItem('darkMode', value))" :class="{ 'dark': darkMode }"
     class="w-full fixed top-0 left-0 z-10 bg-transparent px-6 py-4">
     <div class="max-w-7xl mx-auto flex justify-end items-center">
-        <!-- Logo -->
-        {{-- <div class="font-burtons text-center text-gray-900 dark:text-white"> --}}
-        {{--    <button --}}
-        {{--        class="focus:outline-none rounded-full shadow-lg bg-white hover:bg-gray-300 p-2 dark:bg-gray-800 dark:hover:bg-gray-900 shadow-gray-500 dark:shadow-gray-900"> --}}
-        {{--        <img src="{{ asset('images/logos/logo-prog.svg') }}" alt="logo" height="30" width="30"> --}}
-        {{--    </button> --}}
-        {{--    <div class="text-sm text-gray-700 dark:text-gray-300 p-2">DevelopByMe</div> --}}
-        {{-- </div> --}}
 
         {{-- Botones derechos --}}
         <div class="flex items-center space-x-2">
@@ -16,7 +8,7 @@
             <div x-data="{ open: false, tooltip: false }" class="relative">
                 <!-- Botón para abrir el menú -->
                 <button @click="open = !open" @mouseover="tooltip = true" @mouseleave="tooltip = false"
-                    class="flex text-sm items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-300 shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
+                    class="flex text-sm items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <span class="mr-2">
                         <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`"
                             alt="Idioma actual" class="w-5 h-5">
@@ -30,7 +22,7 @@
                 </div>
                 <!-- Menú desplegable -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-200 shadow-lg shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
+                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-gray-300 shadow-lg shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <ul>
                         <li>
                             <a href="#" @click="changeLocale('es')"
@@ -60,7 +52,7 @@
             <div class="relative">
                 <!-- Botón para modo oscuro -->
                 <button id="dark-theme-toggle"
-                    class="bg-gray-800 hover:bg-gray-900 text-white p-2 rounded-full shadow-lg dark:shadow-gray-900 focus:outline-none hidden">
+                    class="bg-gray-800 hover:bg-everest-lightest text-white p-2 rounded-full shadow-lg dark:shadow-gray-900 focus:outline-none hidden">
                     <!-- Icono de media luna -->
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -71,7 +63,7 @@
 
                 <!-- Botón para modo claro -->
                 <button id="light-theme-toggle"
-                    class="bg-white text-gray-800 hover:bg-gray-300 p-2 rounded-full shadow-xl shadow-gray-500 focus:outline-none">
+                    class="bg-white text-gray-800 hover:bg-everest-lightest p-2 rounded-full shadow-xl shadow-gray-500 focus:outline-none">
                     <!-- Icono de foco encendido -->
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -84,25 +76,6 @@
                 </button>
             </div>
 
-            <!-- Descargar Curriculo -->
-            <div class="text-center text-gray-800 dark:text-gray-200">
-                <a href="doc/Curriculo.pdf" download>
-                    <button
-                        class="flex text-md items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-white text-gray-800 hover:bg-gray-300 shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-6 h-6">
-                            <path d="M2 2v60h60V2H2zm58 58H4V4h56v56z" fill="currentColor" />
-                            <path
-                                d="M46 8H18c-1.1 0-2 .9-2 2v44c0 1.1.9 2 2 2h28c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 44H18V10h28v42z"
-                                fill="currentColor" />
-                            <path d="M22 14h20v4H22zm0 8h20v4H22zm0 8h20v4H22zm0 8h20v4H22zm0 8h20v4H22z"
-                                fill="currentColor" />
-                        </svg>
-                        <div class="px-1">
-                            {{ __('resume') }}
-                        </div>
-                    </button>
-                </a>
-            </div>
 
         </div>
     </div>

@@ -8,6 +8,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+
     <!--=== fontaswesome ===-->
     <link rel="stylesheet" href="./assets/fontaswesome/css/all.min.css" />
     <link rel="stylesheet" href="./assets/fontaswesome/css/fontawesome.min.css" />
@@ -34,7 +37,7 @@
     <div class="flex flex-1 flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 pt-28 md:px-4 px-1 p-2">
         <!-- Sidebar -->
         <div
-            class="relative w-full lg:w-1/3 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 lg:sticky top-4 self-start">
+            class="relative w-full lg:w-1/3 bg-white dark:bg-gray-800  shadow-lg shadow-ocean-lightest rounded-lg p-4 mb-2 lg:sticky top-4 self-start">
             <!-- Imagen flotante centrada en pantallas pequeñas -->
             <div
                 class="absolute w-36 h-36 rounded-full overflow-hidden -top-16 left-1/2 transform -translate-x-1/2 shadow-lg shadow-ocean-main lg:hidden">
@@ -52,8 +55,8 @@
         </div>
 
         <!-- Contenido principal -->
-        <div class="w-full lg:w-2/3 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-2">
-            <p>@yield('content')</p>
+        <div class="w-full p-2 pt-4 lg:w-2/3 bg-white dark:bg-gray-800 shadow-lg shadow-ocean-lightest rounded-lg">
+            <p class="pt-2">@yield('content')</p>
         </div>
     </div>
 
