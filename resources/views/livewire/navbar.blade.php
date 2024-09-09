@@ -1,6 +1,34 @@
-<div x-data="{ open: false, darkMode: localStorage.getItem('darkMode') === 'true', dropdownOpen: false }" x-init="$watch('darkMode', value => localStorage.setItem('darkMode', value))" :class="{ 'dark': darkMode }"
-    class="w-full fixed top-0 left-0 z-10 bg-transparent px-6 py-4">
-    <div class="max-w-7xl mx-auto flex justify-end items-center">
+<div class="w-full fixed top-0 left-0 z-10 bg-transparent px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between lg:justify-end items-center">
+
+        <!-- Navbar Menu Button (Visible on small screens) -->
+        <button @click="isOpen = !isOpen"
+            class="lg:hidden py-2 px-4 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+
+        <!-- Dropdown Menu (Visible on small screens) -->
+        <div x-show="isOpen" @click.away="isOpen = false"
+            class="lg:hidden absolute top-12 left-6 bg-white shadow-lg rounded-md w-48 mt-2 z-50">
+            <button @click="activeTab = 1; isOpen = false"
+                :class="activeTab === 1 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
+                class="block py-2 px-4 w-full text-left transition-colors duration-300 rounded-md hover:bg-ocean-main hover:text-white">
+                Sobre Mi
+            </button>
+            <button @click="activeTab = 2; isOpen = false"
+                :class="activeTab === 2 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
+                class="block py-2 px-4 w-full text-left transition-colors duration-300 rounded-md hover:bg-ocean-main hover:text-white">
+                Portafolio
+            </button>
+            <button @click="activeTab = 3; isOpen = false"
+                :class="activeTab === 3 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
+                class="block py-2 px-4 w-full text-left transition-colors duration-300 rounded-md hover:bg-ocean-main hover:text-white">
+                Blog
+            </button>
+        </div>
 
         {{-- Botones derechos --}}
         <div class="flex items-center space-x-2">
