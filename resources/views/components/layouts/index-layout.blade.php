@@ -28,7 +28,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="min-h-screen font-encode antialiased bg-ocean-lighter dark:bg-ocean-main">
+<body x-data="{ activeTab: 1, isOpen: false, open: false, darkMode: localStorage.getItem('darkMode') === 'true', dropdownOpen: false }" x-init="$watch('darkMode', value => localStorage.setItem('darkMode', value))" :class="{ 'dark': darkMode }"
+    class="min-h-screen font-encode antialiased bg-ocean-lighter dark:bg-ocean-main">
+
 
     <!-- Navbar -->
     @livewire('navbar')
@@ -56,10 +58,51 @@
 
         <!-- Contenido principal -->
         <div class="w-full p-2 pt-4 lg:w-2/3 bg-white dark:bg-gray-800 shadow-lg shadow-ocean-lightest rounded-lg">
-            <p class="pt-2">@yield('content')</p>
+
+            <!-- tabs con AlpineJS -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Tabs as Buttons -->
+                <div class="hidden lg:flex lg:justify-end space-x-4">
+                    <button @click="activeTab = 1"
+                        :class="activeTab === 1 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
+                        class="py-2 px-6 transition-colors duration-300 rounded-full focus:outline-none">
+                        Inicio
+                    </button>
+                    <button @click="activeTab = 2"
+                        :class="activeTab === 2 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
+                        class="py-2 px-6 transition-colors duration-300 rounded-full focus:outline-none">
+                        Portafolio
+                    </button>
+                    <button @click="activeTab = 3"
+                        :class="activeTab === 3 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
+                        class="py-2 px-6 transition-colors duration-300 rounded-full focus:outline-none">
+                        Blog
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="p-4">
+                    <div x-show="activeTab === 1">
+                        <p>@yield('content')</p>
+                    </div>
+                    <div x-show="activeTab === 2">
+                        <p class="text-lg py-2 leading-8 text-gray-800 dark:text-gray-200">portafolio</p>
+                    </div>
+                    <div x-show="activeTab === 3">
+                        <p class="text-lg py-2 leading-8 text-gray-800 dark:text-gray-200">Blog</p>
+                    </div>
+                </div>
+            </div>
+            <!-- fin de Tabs -->
         </div>
     </div>
-
+    <!-- footer start -->
+    <footer class="overflow-hidden rounded-b-2xl" style="background: transparent">
+        <p class="text-center py-6 text-gray-700 dark:text-gray-200"> © 2024 Todos los derechos reservados
+            by <a class="hover:text-everest-lightest duration-300 transition" href="migbertweb.site" target="_blank"
+                rel="noopener noreferrer"> Migbertweb</a>. </p>
+    </footer>
+    <!-- footer section end -->
 </body>
 
 </html>

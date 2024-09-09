@@ -14,7 +14,7 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::get('/lang/{locale}', function ($locale) {
     if (in_array($locale, ['es', 'en', 'pt'])) {

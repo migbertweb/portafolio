@@ -1,6 +1,6 @@
-<div class="text-center p-6 lg:py-6">
+<div class="text-center p-4 lg:py-4">
     <div>
-        <h3 class="text-3xl py-1 dark:text-white ">{{ __('about_me') }}</h3>
+        <h3 class="text-5xl font-brotherline py-1 dark:text-white ">{{ __('about_me') }}</h3>
         <p class="text-lg py-2 leading-8 text-gray-800 dark:text-gray-200">
             {{ __('bio') }}
         </p>
@@ -28,8 +28,6 @@
                     <span class="text-gray-700">Laravel</span>
                 </li>
                 <li class="flex items-center">
-                    <i class="fa-brands fa-git-alt text-gray-900 mr-2"></i>
-                    <span class="text-gray-700">Git y Github</span>
                 </li>
                 <li class="flex items-center">
                     <i class="fa-brands fa-docker text-gray-900 mr-2"></i>

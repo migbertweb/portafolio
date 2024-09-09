@@ -1,4 +1,5 @@
 <x-layouts.index-layout>
+
     @section('sidebar')
         @livewire('about-me')
     @endsection
