@@ -26,11 +26,17 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body x-data="{ activeTab: 1, isOpen: false, open: false, darkMode: localStorage.getItem('darkMode') === 'true', dropdownOpen: false }" x-init="$watch('darkMode', value => localStorage.setItem('darkMode', value))" :class="{ 'dark': darkMode }"
-    class="min-h-screen font-encode antialiased bg-ocean-lighter dark:bg-ocean-main">
-
+    class="min-h-screen font-encode antialiased bg-gradient-to-r from-kansai-meditation to-kansai-sapphiremagic bg-400% animate-gradient-bg">
 
     <!-- Navbar -->
     @livewire('navbar')
@@ -57,7 +63,8 @@
         </div>
 
         <!-- Contenido principal -->
-        <div class="w-full p-2 pt-4 lg:w-2/3 bg-white dark:bg-gray-800 shadow-lg shadow-ocean-lightest rounded-lg">
+        <div
+            class="relative w-full p-4 pt-4 lg:w-2/3 bg-white dark:bg-gray-800 shadow-lg shadow-ocean-lightest rounded-lg">
 
             <!-- tabs con AlpineJS -->
             <div class="max-w-4xl mx-auto">
@@ -66,17 +73,17 @@
                     <button @click="activeTab = 1"
                         :class="activeTab === 1 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
                         class="py-2 px-6 transition-colors duration-300 rounded-full focus:outline-none">
-                        Inicio
+                        {{ __('inicio') }}
                     </button>
                     <button @click="activeTab = 2"
                         :class="activeTab === 2 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
                         class="py-2 px-6 transition-colors duration-300 rounded-full focus:outline-none">
-                        Portafolio
+                        {{ __('portafolio') }}
                     </button>
                     <button @click="activeTab = 3"
                         :class="activeTab === 3 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
                         class="py-2 px-6 transition-colors duration-300 rounded-full focus:outline-none">
-                        Blog
+                        {{ __('blog') }}
                     </button>
                 </div>
 
@@ -97,9 +104,9 @@
         </div>
     </div>
     <!-- footer start -->
-    <footer class="overflow-hidden rounded-b-2xl" style="background: transparent">
-        <p class="text-center py-6 text-gray-700 dark:text-gray-200"> © 2024 Todos los derechos reservados
-            by <a class="hover:text-everest-lightest duration-300 transition" href="migbertweb.site" target="_blank"
+    <footer class="overflow-hidden rounded-b-2xl text-sm md:text-md" style="background: transparent">
+        <p class="text-center py-6 text-gray-700 dark:text-gray-200"> © 2024 {{ __('derechos_r') }} <a
+                class="hover:text-everest-lightest duration-300 transition" href="migbertweb.site" target="_blank"
                 rel="noopener noreferrer"> Migbertweb</a>. </p>
     </footer>
     <!-- footer section end -->

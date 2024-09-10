@@ -104,7 +104,7 @@
     <div class="flex flex-col items-center mt-2">
         <a href="doc/Curriculo.pdf" download class="text-center">
             <button
-                class="font-encode flex px-4 py-2 rounded-lg border-4 border-double border-ocean-main shadow-inner lg:text-xl bg-white dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
+                class="font-encode flex lg:text-xl py-2 px-6 transition-colors duration-300 rounded-full focus:outline-none bg-ocean-main text-white shadow-ocean-main">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-6 h-6 md:w-8 md:h-8 px-1">
                     <path d="M2 2v60h60V2H2zm58 58H4V4h56v56z" fill="currentColor" />
                     <path

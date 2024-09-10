@@ -1,7 +1,11 @@
 {
     "title": "Web Developer Jr.",
     "about_me": "About Me",
+    "derechos_r": "All rights reserved by",
     "download": "Download",
+    "inicio": "Home",
+    "portafolio": "Portfolio",
+    "blog": "Blog",
     "coding": "Programming Skills",
     "coding_desc": "Creation of elegant and efficient websites and webapps adapted to your needs following modern programming paradigms.",
     "coding_uses": "Favorite Programming Languages and Tools.",
