@@ -1,7 +1,11 @@
 {
     "title": "Desenvolvedor Web Jr.",
     "about_me": "Sobre Mim",
+    "derechos_r": "Todos os direitos reservados por",
     "download": "Descargar",
+    "inicio": "Home",
+    "portafolio": "Portfólio",
+    "blog": "Blog",
     "coding": "Habilidades do programador",
     "coding_desc": "Criação de sites e webapps elegantes e eficientes, adaptados às suas necessidades seguindo paradigmas de programação modernos.",
     "coding_uses": "Linguagens e ferramentas de programação favoritas.",

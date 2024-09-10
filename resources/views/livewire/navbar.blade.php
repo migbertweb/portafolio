@@ -16,17 +16,17 @@
             <button @click="activeTab = 1; isOpen = false"
                 :class="activeTab === 1 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
                 class="block py-2 px-4 w-full text-left transition-colors duration-300 rounded-md hover:bg-ocean-main hover:text-white">
-                Sobre Mi
+                {{ __('inicio') }}
             </button>
             <button @click="activeTab = 2; isOpen = false"
                 :class="activeTab === 2 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
                 class="block py-2 px-4 w-full text-left transition-colors duration-300 rounded-md hover:bg-ocean-main hover:text-white">
-                Portafolio
+                {{ __('portafolio') }}
             </button>
             <button @click="activeTab = 3; isOpen = false"
                 :class="activeTab === 3 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
                 class="block py-2 px-4 w-full text-left transition-colors duration-300 rounded-md hover:bg-ocean-main hover:text-white">
-                Blog
+                {{ __('blog') }}
             </button>
         </div>
 
