@@ -1,4 +1,17 @@
 import './bootstrap';
+import 'atropos/css';
+
+// import Atropos library
+import Atropos from 'atropos';
+
+// Initialize
+const myAtropos = Atropos({
+    el: '.my-atropos',
+
+    // rest of parameters
+});
+
+
 // Alternar Idioma
 document.addEventListener('DOMContentLoaded', function () {
     const storedLocale = window.localStorage.getItem('locale');
