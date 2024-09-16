@@ -35,7 +35,7 @@
     </style>
 </head>
 
-<body x-data="{ activeTab: 1, isOpen: false, open: false, darkMode: localStorage.getItem('darkMode') === 'true', dropdownOpen: false }" x-init="$watch('darkMode', value => localStorage.setItem('darkMode', value))" :class="{ 'dark': darkMode }"
+<body x-data="mainData()" x-init="initialize()" :class="{ 'dark': darkMode }"
     class="min-h-screen font-encode antialiased bg-gradient-to-r from-kansai-meditation to-kansai-sapphiremagic bg-400% animate-gradient-bg">
 
     <!-- Navbar -->
@@ -47,17 +47,29 @@
         <div
             class="relative w-full lg:w-1/3 bg-white dark:bg-gray-800  shadow-lg shadow-ocean-lightest rounded-lg p-4 mb-2 lg:sticky top-4 self-start">
             <!-- Imagen flotante centrada en pantallas pequeñas -->
-            <div
+            <div id="profile-container"
                 class="absolute w-36 h-36 rounded-full overflow-hidden -top-16 left-1/2 transform -translate-x-1/2 shadow-lg shadow-ocean-main lg:hidden">
-                <img src="{{ asset('images/profile/perfil1.jpg') }}" alt="Imagen de perfil"
+                <img id="profile-image" src="{{ asset('images/profile/perfil1.jpg') }}" alt="Imagen de perfil"
                     class="w-full h-full object-cover">
             </div>
 
             <!-- Imagen integrada en pantallas grandes -->
-            <div
-                class="hidden lg:block absolute w-48 h-48 rounded-xl overflow-hidden -top-20 left-1/2 transform -translate-x-1/2 shadow-lg shadow-ocean-main">
-                <img src="{{ asset('images/profile/perfil1.jpg') }}" alt="Imagen de perfil"
-                    class="w-full h-full object-cover">
+            <div id="profile-container"
+                class="hidden lg:block absolute w-42 h-42 rounded-xl overflow-hidden -top-24 left-1/2 transform -translate-x-1/2 shadow-lg shadow-ocean-main">
+                <div class="atropos my-atropos">
+                    <!-- scale container (required) -->
+                    <div class="atropos-scale">
+                        <!-- rotate container (required) -->
+                        <div class="atropos-rotate">
+                            <!-- inner container (required) -->
+                            <div class="atropos-inner">
+                                <!-- put your custom content here -->
+                                <img id="profile-image" src="{{ asset('images/profile/perfil1.jpg') }}"
+                                    alt="Imagen de perfil" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <p class="mt-12 lg:mt-16">@yield('sidebar')</p>
         </div>
@@ -88,15 +100,17 @@
                 </div>
 
                 <!-- Tab Content -->
-                <div class="p-4">
+                <div>
                     <div x-show="activeTab === 1">
                         <p>@yield('content')</p>
                     </div>
                     <div x-show="activeTab === 2">
-                        <p class="text-lg py-2 leading-8 text-gray-800 dark:text-gray-200">portafolio</p>
+                        <p>@yield('content2')</p>
+
                     </div>
                     <div x-show="activeTab === 3">
-                        <p class="text-lg py-2 leading-8 text-gray-800 dark:text-gray-200">Blog</p>
+                        <p>@yield('content3')</p>
+
                     </div>
                 </div>
             </div>
@@ -110,6 +124,56 @@
                 rel="noopener noreferrer"> Migbertweb</a>. </p>
     </footer>
     <!-- footer section end -->
+
+    <script>
+        function mainData() {
+            return {
+                activeTab: 1,
+                isOpen: false,
+                open: false,
+                darkMode: localStorage.getItem('darkMode') === 'true',
+                dropdownOpen: false,
+                posts: [],
+                currentPost: null,
+
+                async initialize() {
+                    this.$watch('darkMode', value => localStorage.setItem('darkMode', value));
+                    this.fetchPosts();
+                },
+
+                async fetchPosts() {
+                    try {
+                        const response = await fetch('./posts.json');
+                        const data = await response.json();
+                        this.posts = data.map(post => ({
+                            ...post,
+                            expanded: false
+                        }));
+                    } catch (error) {
+                        console.error('Error fetching posts:', error);
+                    }
+                },
+
+                toggleExpand(post) {
+                    if (this.currentPost && this.currentPost.id !== post.id) {
+                        this.currentPost.expanded = false; // Collapse the currently expanded post
+                    }
+                    post.expanded = !post.expanded;
+                    this.currentPost = post.expanded ? post : null;
+                },
+
+                nextPost() {
+                    const index = this.posts.findIndex(post => post.id === this.currentPost.id);
+                    this.currentPost = this.posts[(index + 1) % this.posts.length];
+                },
+
+                prevPost() {
+                    const index = this.posts.findIndex(post => post.id === this.currentPost.id);
+                    this.currentPost = this.posts[(index - 1 + this.posts.length) % this.posts.length];
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

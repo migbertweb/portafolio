@@ -1,9 +1,6 @@
 <div class="text-center p-2 lg:py-2">
-    <div>
-        <h3 class="text-5xl font-brotherline py-1 dark:text-white ">{{ __('about_me') }}</h3>
-        <p class="text-lg py-2 leading-8 text-gray-800 dark:text-gray-200">
-            {{ __('bio') }}
-        </p>
+     <div>
+        <h3 class="text-5xl font-brotherline py-1 dark:text-white ">{{ __('portafolio') }}</h3>
     </div>
     <div class="lg:flex gap-4">
         <div
