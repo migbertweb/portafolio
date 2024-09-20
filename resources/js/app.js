@@ -10,7 +10,7 @@ const myAtropos = Atropos({
 
     // rest of parameters
 });
-
+//
 
 // Alternar Idioma
 document.addEventListener('DOMContentLoaded', function () {
