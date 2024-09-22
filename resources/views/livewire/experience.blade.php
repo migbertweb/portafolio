@@ -7,7 +7,7 @@
     </div>
     <div class="lg:flex gap-4">
         <div
-            class="text-center flex flex-col items-center shadow-lg shadow-ocean-main pt-2 pb-6 my-6 rounded-xl dark:bg-white flex-1">
+            class="text-center flex flex-col items-center shadow-lg shadow-ocean-main p-2 pb-6 my-6 rounded-xl bg-white dark:bg-white flex-1">
             <div clas="text-center">
                 <img src="{{ asset('images/misc/coding.png') }}" class="h-48 w-48">
             </div>
@@ -41,7 +41,7 @@
 
         </div>
         <div
-            class="text-center flex flex-col items-center shadow-lg shadow-ocean-main pt-2 pb-6 my-6 rounded-xl dark:bg-white flex-1">
+            class="text-center flex flex-col items-center shadow-lg shadow-ocean-main p-2 pb-6 my-6 rounded-xl bg-white dark:bg-white flex-1">
             <div clas="text-center">
                 <img src="{{ asset('images/misc/aptitud.webp') }}" class="h-48 w-48">
             </div>

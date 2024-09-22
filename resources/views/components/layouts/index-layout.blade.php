@@ -26,13 +26,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-    </style>
+
 </head>
 
 <body x-data="mainData()" x-init="initialize()" :class="{ 'dark': darkMode }"
@@ -45,7 +39,7 @@
     <div class="flex flex-1 flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 pt-28 md:px-4 px-1 p-2">
         <!-- Sidebar -->
         <div
-            class="relative w-full lg:w-1/3 bg-white dark:bg-gray-800  shadow-lg shadow-ocean-lightest rounded-lg p-4 mb-2 lg:sticky top-4 self-start">
+            class="relative w-full lg:w-1/3 bg-everest-main dark:bg-gray-800 shadow-lg shadow-ocean-lightest rounded-lg p-4 mb-2 lg:sticky top-4 self-start">
             <!-- Imagen flotante centrada en pantallas pequeñas -->
             <div id="profile-container"
                 class="absolute w-36 h-36 rounded-full overflow-hidden -top-16 left-1/2 transform -translate-x-1/2 shadow-lg shadow-ocean-main lg:hidden">
@@ -76,7 +70,7 @@
 
         <!-- Contenido principal -->
         <div
-            class="relative w-full p-4 pt-4 lg:w-2/3 bg-white dark:bg-gray-800 shadow-lg shadow-ocean-lightest rounded-lg">
+            class="relative w-full p-4 pt-4 lg:w-2/3 bg-everest-main dark:bg-gray-800 shadow-lg shadow-ocean-lightest rounded-lg">
 
             <!-- tabs con AlpineJS -->
             <div class="max-w-4xl mx-auto">
@@ -125,55 +119,55 @@
     </footer>
     <!-- footer section end -->
 
-    <script>
-        function mainData() {
-            return {
-                activeTab: 1,
-                isOpen: false,
-                open: false,
-                darkMode: localStorage.getItem('darkMode') === 'true',
-                dropdownOpen: false,
-                posts: [],
-                currentPost: null,
-
-                async initialize() {
-                    this.$watch('darkMode', value => localStorage.setItem('darkMode', value));
-                    this.fetchPosts();
-                },
-
-                async fetchPosts() {
-                    try {
-                        const response = await fetch('./posts.json');
-                        const data = await response.json();
-                        this.posts = data.map(post => ({
-                            ...post,
-                            expanded: false
-                        }));
-                    } catch (error) {
-                        console.error('Error fetching posts:', error);
-                    }
-                },
-
-                toggleExpand(post) {
-                    if (this.currentPost && this.currentPost.id !== post.id) {
-                        this.currentPost.expanded = false; // Collapse the currently expanded post
-                    }
-                    post.expanded = !post.expanded;
-                    this.currentPost = post.expanded ? post : null;
-                },
-
-                nextPost() {
-                    const index = this.posts.findIndex(post => post.id === this.currentPost.id);
-                    this.currentPost = this.posts[(index + 1) % this.posts.length];
-                },
-
-                prevPost() {
-                    const index = this.posts.findIndex(post => post.id === this.currentPost.id);
-                    this.currentPost = this.posts[(index - 1 + this.posts.length) % this.posts.length];
-                }
-            }
-        }
-    </script>
+    {{-- <script> --}}
+    {{--    function mainData() { --}}
+    {{--        return { --}}
+    {{--            activeTab: 1, --}}
+    {{--            isOpen: false, --}}
+    {{--            open: false, --}}
+    {{--            darkMode: localStorage.getItem('darkMode') === 'true', --}}
+    {{--            dropdownOpen: false, --}}
+    {{--            posts: [], --}}
+    {{--            currentPost: null, --}}
+    {{-- --}}
+    {{--            async initialize() { --}}
+    {{--                this.$watch('darkMode', value => localStorage.setItem('darkMode', value)); --}}
+    {{--                this.fetchPosts(); --}}
+    {{--            }, --}}
+    {{-- --}}
+    {{--            async fetchPosts() { --}}
+    {{--                try { --}}
+    {{--                    const response = await fetch('./posts.json'); --}}
+    {{--                    const data = await response.json(); --}}
+    {{--                    this.posts = data.map(post => ({ --}}
+    {{--                        ...post, --}}
+    {{--                        expanded: false --}}
+    {{--                    })); --}}
+    {{--                } catch (error) { --}}
+    {{--                    console.error('Error fetching posts:', error); --}}
+    {{--                } --}}
+    {{--            }, --}}
+    {{-- --}}
+    {{--            toggleExpand(post) { --}}
+    {{--                if (this.currentPost && this.currentPost.id !== post.id) { --}}
+    {{--                    this.currentPost.expanded = false; // Collapse the currently expanded post --}}
+    {{--                } --}}
+    {{--                post.expanded = !post.expanded; --}}
+    {{--                this.currentPost = post.expanded ? post : null; --}}
+    {{--            }, --}}
+    {{-- --}}
+    {{--            nextPost() { --}}
+    {{--                const index = this.posts.findIndex(post => post.id === this.currentPost.id); --}}
+    {{--                this.currentPost = this.posts[(index + 1) % this.posts.length]; --}}
+    {{--            }, --}}
+    {{-- --}}
+    {{--            prevPost() { --}}
+    {{--                const index = this.posts.findIndex(post => post.id === this.currentPost.id); --}}
+    {{--                this.currentPost = this.posts[(index - 1 + this.posts.length) % this.posts.length]; --}}
+    {{--            } --}}
+    {{--        } --}}
+    {{--    } --}}
+    {{-- </script> --}}
 </body>
 
 </html>
