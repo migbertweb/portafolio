@@ -3,7 +3,7 @@
 
         <!-- Navbar Menu Button (Visible on small screens) -->
         <button @click="isOpen = !isOpen"
-            class="lg:hidden py-2 px-4 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
+            class="lg:hidden py-2 px-4 rounded-lg bg-everest-main dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                 </path>
@@ -12,7 +12,7 @@
 
         <!-- Dropdown Menu (Visible on small screens) -->
         <div x-show="isOpen" @click.away="isOpen = false"
-            class="lg:hidden absolute top-12 left-6 bg-white shadow-lg rounded-md w-48 mt-2 z-50">
+            class="lg:hidden absolute top-12 left-6 bg-everest-main shadow-lg rounded-md w-48 mt-2 z-50">
             <button @click="activeTab = 1; isOpen = false"
                 :class="activeTab === 1 ? 'bg-ocean-main text-white shadow-ocean-main' : 'bg-gray-200 text-gray-700'"
                 class="block py-2 px-4 w-full text-left transition-colors duration-300 rounded-md hover:bg-ocean-main hover:text-white">
@@ -33,10 +33,10 @@
         {{-- Botones derechos --}}
         <div class="flex items-center space-x-2">
             {{-- Menu para cambio de idioma --}}
-            <div x-data="{ open: false, tooltip: false }" class="relative">
+            <div x-data="{ open: false }" class="relative">
                 <!-- Botón para abrir el menú -->
-                <button @click="open = !open" @mouseover="tooltip = true" @mouseleave="tooltip = false"
-                    class="flex text-sm items-center p-2 rounded-lg bg-white dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
+                <button @click="open = !open" title="{{ __('lang')}}"
+                    class="flex text-sm items-center p-2 rounded-lg bg-everest-main dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <span class="mr-2">
                         <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`"
                             alt="Idioma actual" class="w-5 h-5">
@@ -44,13 +44,10 @@
                     <span
                         x-text="window.localStorage.getItem('locale') ? window.localStorage.getItem('locale').toUpperCase() : 'ES'"></span>
                 </button>
-                <!-- Tooltip -->
-                <div x-show="tooltip" class="absolute top-full mt-1 mr-1 bg-black text-white text-xs rounded py-1 px-2">
-                    Cambiar el Idioma
-                </div>
+
                 <!-- Menú desplegable -->
                 <div x-show="open" @click.away="open = false"
-                    class="absolute mt-2 w-30 rounded-md  bg-white dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-gray-300 shadow-lg shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
+                    class="absolute mt-2 w-30 rounded-md  bg-everest-main dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-gray-300 shadow-lg shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <ul>
                         <li>
                             <a href="#" @click="changeLocale('es')"
@@ -79,7 +76,7 @@
             {{-- -- Boton para cambio de tema -- --}}
             <div class="relative">
                 <!-- Botón para modo oscuro -->
-                <button id="dark-theme-toggle"
+                <button id="dark-theme-toggle" title="{{ __('dark') }}"
                     class="bg-gray-800 hover:bg-everest-lightest text-white p-2 rounded-full shadow-lg dark:shadow-gray-900 focus:outline-none hidden">
                     <!-- Icono de media luna -->
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -90,8 +87,8 @@
                 </button>
 
                 <!-- Botón para modo claro -->
-                <button id="light-theme-toggle"
-                    class="bg-white text-gray-800 hover:bg-everest-lightest p-2 rounded-full shadow-xl shadow-gray-500 focus:outline-none">
+                <button id="light-theme-toggle"  title="{{ __('light') }}"
+                    class="bg-everest-main text-gray-800 hover:bg-everest-lightest p-2 rounded-full shadow-xl shadow-gray-500 focus:outline-none">
                     <!-- Icono de foco encendido -->
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <path
