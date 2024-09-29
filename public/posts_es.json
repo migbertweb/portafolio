@@ -1,6 +1,15 @@
 [
     {
         "id": 1,
+        "title": "Cómo Creé Mi Portafolio Web con Laravel, Breeze, Livewire y TailwindCSS",
+        "image": "images/misc/stack.png",
+        "summary": "<p>Desarrollar mi portafolio web con <strong>Laravel</strong>, <strong>Breeze</strong>, <strong>Livewire</strong>, <strong>TailwindCSS</strong> y <strong>Alpine.js</strong> fue un proceso emocionante y gratificante. Inspirado por diversas fuentes y con la ayuda de <strong>ChatGPT</strong>, pude crear un diseño único y funcional. Implementé una <strong>GitHub Action</strong> para facilitar el despliegue automático en mi <strong>VPS</strong>, lo que optimizó mi flujo de trabajo. Aprender nuevas herramientas es clave para el crecimiento como desarrollador.</p>",
+        "content": "<p>Desarrollar mi portafolio web fue un proceso emocionante, desafiante y, sobre todo, muy satisfactorio. Decidí utilizar <strong>Laravel</strong> como base, aprovechando su starter kit <strong>Breeze</strong> para obtener una estructura inicial sólida con autenticación básica. Breeze fue el punto de partida perfecto para personalizar y adaptar el proyecto a mis necesidades. Quería que el portafolio no solo mostrara mis proyectos, sino también reflejara mi capacidad para trabajar con tecnologías modernas como <strong>Livewire</strong>, <strong>TailwindCSS</strong> y <strong>Alpine.js</strong>.</p><p>La parte más interesante del desarrollo fue la <strong>creación del diseño</strong>. Aunque reuní algunas ideas de sitios web de diseñadores y <strong>Pinterest</strong>, el diseño final fue, en su mayoría, el resultado de mi creatividad personal. TailwindCSS me permitió trabajar de manera rápida y eficiente en el estilo visual del sitio, manteniendo una apariencia minimalista y limpia, lo que facilitó el proceso y me dio un control casi total sobre la apariencia de la página. El uso de <strong>TailwindCSS</strong> fue, sin duda, uno de los aspectos más gratificantes, ya que me permitió personalizar sin sobrecargar el código con clases innecesarias.</p><p><strong>Livewire</strong> desempeñó un papel crucial en la creación de componentes interactivos sin la necesidad de escribir un exceso de JavaScript. Esto me permitió desarrollar funcionalidades dinámicas, como formularios en tiempo real o actualizaciones de la lista de proyectos, sin recargar la página. Por otro lado, <strong>Alpine.js</strong> me ayudó a añadir interactividad ligera y eficiente, mejorando la experiencia del usuario sin afectar la velocidad del sitio.</p><p>Uno de los aspectos que más disfruté durante el proceso fue la oportunidad de aprender y profundizar en nuevas herramientas. Conté con la ayuda de <strong>ChatGPT</strong>, que se convirtió en mi principal aliado para resolver problemas de implementación y optimizar el código. Tener acceso a esta herramienta me permitió entender mejor la interacción entre <strong>Laravel</strong>, <strong>Livewire</strong> y <strong>Alpine.js</strong>, ayudándome a dominar nuevas tecnologías. Este proceso de aprendizaje fue muy satisfactorio, ya que me ayudó a mejorar mis habilidades como desarrollador. En un mundo donde las tecnologías avanzan rápidamente, comprender nuevas herramientas y adaptarse rápidamente es esencial para destacar.</p><p>Además, quería asegurarme de que mi portafolio estuviera siempre actualizado de manera eficiente, por lo que implementé una <strong>GitHub Action</strong> para que el código se desplegara automáticamente en mi servidor personal alojado en un <strong>VPS</strong>. Esto me permite realizar cambios y actualizaciones simplemente haciendo push en mi <strong>GitHub</strong> repository, ahorrando tiempo y reduciendo el margen de error en el proceso de despliegue. Este nivel de automatización no solo es práctico, sino que también me enseñó mucho sobre la importancia de optimizar los flujos de trabajo en el desarrollo web.</p><p>En resumen, el proceso de crear mi portafolio ha sido una experiencia increíblemente gratificante. No solo he podido combinar creatividad y funcionalidad utilizando <strong>Laravel</strong>, <strong>Livewire</strong>, <strong>TailwindCSS</strong> y <strong>Alpine.js</strong>, sino que también he aprendido mucho sobre trabajar con estas herramientas modernas. Este conocimiento es clave para seguir creciendo como desarrollador en un entorno donde la tecnología está en constante cambio. Mi código completo está disponible en <strong>GitHub</strong>, y espero que pueda servir de inspiración o guía para otros desarrolladores que buscan crear un portafolio atractivo y funcional.</p>",
+        "author": "Migbertweb",
+        "date": "25 Sept 2024"
+    },
+    {
+        "id": 3,
         "title": "La Inteligencia Artificial: Entre la Ciencia y la Ciencia Ficción",
         "image": "images/misc/andrea-de-santis.jpg",
         "summary": "Este artículo explora la evolución de la inteligencia artificial a través de las películas \"Terminator\" y \"Ghost in the Shell\", analizando cómo estas historias reflejan nuestros miedos sobre el futuro de las máquinas y la automatización. Con un toque de humor negro, se discuten las implicaciones de un posible dominio de los robots y la relación con el avance tecnológico actual.",
@@ -9,7 +18,7 @@
         "date": "10 Ago 2024"
     },
     {
-        "id": 2,
+        "id": 4,
         "title": "Dragones, Anillos y Superpotencias: La Geopolítica en el Mundo Friki",
         "image": "images/misc/throno.jpg",
         "summary": "Se exploran los paralelismos entre las sagas épicas \"El Señor de los Anillos\" y \"Juego de Tronos\" con los problemas geopolíticos actuales. El artículo examina cómo el ascenso de China como potencia mundial refleja una nueva dinámica global, mientras que Occidente enfrenta su propio declive, en una narrativa que parece sacada de la fantasía medieval.",
@@ -18,7 +27,7 @@
         "date": "03 Sep 2024"
     },
     {
-        "id": 3,
+        "id": 2,
         "title": "Laravel: El Superhéroe de los Frameworks PHP (Con Capa Incluida)",
         "image": "images/misc/Laravel-Programmer.jpg",
         "summary": "Laravel ha revolucionado el desarrollo web en PHP, proporcionando a los desarrolladores herramientas elegantes y prácticas. Este artículo recorre su evolución desde su creación en 2011, pasando por su consolidación como un ecosistema completo, y su proyección futura, incluyendo la integración con la nube. Laravel se ha convertido en un verdadero superhéroe para los programadores modernos.",

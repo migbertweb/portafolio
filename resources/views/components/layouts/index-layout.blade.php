@@ -43,7 +43,7 @@
             <!-- Imagen flotante centrada en pantallas pequeñas -->
             <div id="profile-container"
                 class="absolute w-36 h-36 rounded-full overflow-hidden -top-16 left-1/2 transform -translate-x-1/2 shadow-lg shadow-ocean-main lg:hidden">
-                <img id="profile-image" src="{{ asset('images/profile/perfil1.jpg') }}" alt="Imagen de perfil"
+                <img id="profile-image" src="{{ asset('images/profile/perfil1.png') }}" alt="Imagen de perfil"
                     class="w-full h-full object-cover">
             </div>
 
@@ -58,7 +58,7 @@
                             <!-- inner container (required) -->
                             <div class="atropos-inner">
                                 <!-- put your custom content here -->
-                                <img id="profile-image" src="{{ asset('images/profile/perfil1.jpg') }}"
+                                <img id="profile-image" src="{{ asset('images/profile/perfil1.png') }}"
                                     alt="Imagen de perfil" class="w-full h-full object-cover">
                             </div>
                         </div>

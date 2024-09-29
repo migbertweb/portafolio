@@ -10,22 +10,51 @@ function mainData() {
 
         async initialize() {
             this.$watch('darkMode', value => localStorage.setItem('darkMode', value));
-            this.fetchPosts();
+            await this.storeAllPosts(); // Cargar todos los posts en caché
+            this.fetchPosts(); // Luego, cargar los posts del idioma actual
         },
 
         async fetchPosts() {
+            const locale = localStorage.getItem('locale') || 'en'; // Obtener el idioma guardado o usar 'en' por defecto
+            const cacheKey = `posts_${locale}`; // Clave para el localStorage
             try {
-                const response = await fetch('./posts.json');
-                const data = await response.json();
-                this.posts = data.map(post => ({
-                    ...post,
-                    expanded: false
-                }));
+                // Verificar si los datos están en localStorage
+                const cachedData = localStorage.getItem(cacheKey);
+                if (cachedData) {
+                    // Si hay datos en la caché, usarlos
+                    this.posts = JSON.parse(cachedData).map(post => ({
+                        ...post,
+                        expanded: false
+                    }));
+                } else {
+                    // Si no hay datos en la caché, hacer la solicitud
+                    const response = await fetch(`./posts_${locale}.json`); // Cargar el archivo de posts según el idioma
+                    const data = await response.json();
+                    this.posts = data.map(post => ({
+                        ...post,
+                        expanded: false
+                    }));
+
+                    // Almacenar los datos en localStorage para futuros usos
+                    localStorage.setItem(cacheKey, JSON.stringify(data));
+                }
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }
         },
-
+        async storeAllPosts() {
+            const locales = ['en', 'es', 'pt']; // Lista de idiomas
+            for (const locale of locales) {
+                const cacheKey = `posts_${locale}`;
+                try {
+                    const response = await fetch(`./posts_${locale}.json`);
+                    const data = await response.json();
+                    localStorage.setItem(cacheKey, JSON.stringify(data)); // Almacenar en localStorage
+                } catch (error) {
+                    console.error(`Error fetching posts for ${locale}:`, error);
+                }
+            }
+        },
         toggleExpand(post) {
             if (this.currentPost && this.currentPost.id !== post.id) {
                 this.currentPost.expanded = false; // Collapse the currently expanded post
