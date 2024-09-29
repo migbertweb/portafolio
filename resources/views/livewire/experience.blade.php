@@ -1,9 +1,7 @@
 <div class="text-center p-2 lg:py-2">
     <div>
         <h3 class="text-5xl font-brotherline py-1 dark:text-white ">{{ __('about_me') }}</h3>
-        <p class="text-lg py-2 leading-8 text-gray-800 dark:text-gray-200">
-            {{ __('bio') }}
-        </p>
+        {!! __('bio') !!}
     </div>
     <div class="lg:flex gap-4">
         <div
@@ -11,7 +9,7 @@
             <div clas="text-center">
                 <img src="{{ asset('images/misc/coding.png') }}" class="h-48 w-48">
             </div>
-            <h3 class="text-xl font-extrabold pt-6 pb-2  ">
+            <h3 class="text-xl font-extrabold pt-6 pb-2">
                 {{ __('coding') }}
             </h3>
             <p class="py-2">
@@ -72,4 +70,6 @@
             </ul>
         </div>
     </div>
+    <!-- Aquí llamamos al componente Livewire del carrusel -->
+    <livewire:image-carousel />
 </div>

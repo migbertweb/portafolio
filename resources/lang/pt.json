@@ -17,7 +17,7 @@
     "eficient": "Eficiente",
     "speed_a": "Aprendizagem Rápida",
     "nombre": "Migbert F. Yanez Cana",
-    "bio": "Olá, sou um desenvolvedor web júnior. Cientista da computação com experiência em desenvolvimento web backend e frontend, apaixonado por programação em geral, em busca de uma oportunidade que me permita evoluir minhas habilidades e aproveitá-las de forma eficaz e eficiente.",
+    "bio": "<p class='text-lg py-2 leading-8 text-gray-800 dark:text-gray-200'>Sou um programador com experiência em <strong>PHP</strong> e <strong>Laravel</strong> (Livewire), com domínio de <strong>Docker</strong> em VPS, e conhecimento em <strong>MySQL</strong> e <strong>React</strong>. Uso <strong>Linux</strong> e <strong>Neovim</strong> como ambiente de desenvolvimento. Aprendo rapidamente novas tecnologias e linguagens graças à minha sólida base em programação. Sou venezuelano, residindo no Brasil, buscando novas oportunidades de crescimento profissional.</p>",
     "resume": "Curriculo",
     "A Timeout Occurred": "Ocorreu Um Tempo Limite",
     "Accepted": "Aceito",
