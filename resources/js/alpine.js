@@ -15,7 +15,7 @@ function mainData() {
         },
 
         async fetchPosts() {
-            const locale = localStorage.getItem('locale') || 'en'; // Obtener el idioma guardado o usar 'en' por defecto
+            const locale = localStorage.getItem('locale') || 'pt'; // Obtener el idioma guardado o usar 'en' por defecto
             const cacheKey = `posts_${locale}`; // Clave para el localStorage
             try {
                 // Verificar si los datos están en localStorage
