@@ -17,7 +17,7 @@
     "eficient": "Efficient",
     "speed_a": "Fast Learning",
     "nombre": "Migbert Yanez Caña",
-    "bio": "Hi, I'm a junior web developer. Computer scientist with experience in backend and frontend web development, passionate about programming in general, looking for an opportunity that allows me to evolve my skills and use them effectively and efficiently.",
+    "bio": "<p class='text-lg py-2 leading-8 text-gray-800 dark:text-gray-200'>I am a programmer with experience in <strong>PHP</strong> and <strong>Laravel</strong> (Livewire), proficient in <strong>Docker</strong> for VPS, and knowledgeable in <strong>MySQL</strong> and <strong>React</strong>. I use <strong>Linux</strong> and <strong>Neovim</strong> as my development environment. I quickly learn new technologies and languages thanks to my strong foundation in programming. I'm a Venezuelan residing in Brazil, seeking new opportunities for professional growth.</p>",
     "resume": "Resume",
     "A Timeout Occurred": "A Timeout Occurred",
     "Accepted": "Accepted",
