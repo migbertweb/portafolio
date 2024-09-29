@@ -38,11 +38,11 @@
                 <button @click="open = !open" title="{{ __('lang')}}"
                     class="flex text-sm items-center p-2 rounded-lg bg-everest-main dark:bg-gray-800 dark:hover:bg-everest-lightest dark:text-white text-gray-800 hover:bg-everest-lightest shadow-xl shadow-gray-500 dark:shadow-gray-900 focus:outline-none">
                     <span class="mr-2">
-                        <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'es'}.svg`"
+                        <img :src="`/images/flags/${window.localStorage.getItem('locale') || 'pt'}.svg`"
                             alt="Idioma actual" class="w-5 h-5">
                     </span>
                     <span
-                        x-text="window.localStorage.getItem('locale') ? window.localStorage.getItem('locale').toUpperCase() : 'ES'"></span>
+                        x-text="window.localStorage.getItem('locale') ? window.localStorage.getItem('locale').toUpperCase() : 'PT'"></span>
                 </button>
 
                 <!-- Menú desplegable -->
