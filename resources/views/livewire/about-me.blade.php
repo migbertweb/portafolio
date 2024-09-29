@@ -1,11 +1,11 @@
 <div>
-    <div class="text-center lg:p-6 p-4">
+    <div class="text-center lg:p-4 p-2">
         <h2 class="lg:text-4xl text-3xl py-2 pt-8 text-teal-600 font-brotherline dark:text-teal-300">
             {{ __('nombre') }}
         </h2>
 
         <div
-            class="font-encode font-extrabold inline-block rounded-lg border-4 border-double border-ocean-main shadow-inner text-lg p-2 dark:text-gray-100">
+            class="font-encode font-extrabold inline-block rounded-lg text-lg dark:text-gray-100">
             {{ __('title') }}
         </div>
     </div>
@@ -60,7 +60,7 @@
     <div class="flex flex-col items-center mt-2">
         <a href="doc/Curriculo.pdf" download class="text-center">
             <button
-                class="font-encode flex lg:text-lg py-2 px-4 transition-colors duration-300 rounded-full focus:outline-none bg-ocean-main text-white shadow-ocean-main">
+                class="font-encode flex lg:text-lg bg-ocean-main text-white shadow-ocean-main py-2 px-6 transition-all duration-300 transform rounded-full focus:outline-none hover:shadow-lg hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-6 h-6 md:w-8 md:h-8 px-1">
                     <path d="M2 2v60h60V2H2zm58 58H4V4h56v56z" fill="currentColor" />
                     <path
