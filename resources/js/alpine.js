@@ -7,12 +7,25 @@ function mainData() {
         dropdownOpen: false,
         posts: [],
         currentPost: null,
+        activeSlide: 0,
+        slidesCount: 0,  // Número de imágenes
 
         async initialize() {
             this.$watch('darkMode', value => localStorage.setItem('darkMode', value));
             await this.storeAllPosts(); // Cargar todos los posts en caché
             this.fetchPosts(); // Luego, cargar los posts del idioma actual
+
+            // Lógica del slideshow
+            this.startSlideshow();
         },
+
+        startSlideshow() {
+            // Establece el intervalo para cambiar las imágenes cada 3 segundos
+            setInterval(() => {
+                this.activeSlide = (this.activeSlide + 1) % this.slidesCount;
+            }, 3000);
+        },
+
 
         async fetchPosts() {
             const locale = localStorage.getItem('locale') || 'pt'; // Obtener el idioma guardado o usar 'en' por defecto
