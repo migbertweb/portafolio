@@ -1,4 +1,4 @@
-# ![Portfolio Banner](https://github.com/migbertweb/portafolio/tree/master/public/images/misc/banner.png)
+# ![Portfolio Banner](public/images/misc/banner.png)
 
 ## 🌟 Mi Portafolio Web
 
