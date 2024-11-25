@@ -1,5 +1,5 @@
 {
-    "title": "Desenvolvedor Web Jr.",
+    "title": "Desenvolvedor Web",
     "about_me": "Sobre Mim",
     "derechos_r": "Todos os direitos reservados por",
     "download": "Descargar",
@@ -17,7 +17,7 @@
     "eficient": "Eficiente",
     "speed_a": "Aprendizagem Rápida",
     "nombre": "Migbert F. Yanez Cana",
-    "bio": "<p class='text-lg py-2 leading-8 text-gray-800 dark:text-gray-200'>Sou um programador com experiência em <strong>PHP</strong> e <strong>Laravel</strong> (Livewire), com domínio de <strong>Docker</strong> em VPS, e conhecimento em <strong>MySQL</strong> e <strong>React</strong>. Uso <strong>Linux</strong> e <strong>Neovim</strong> como ambiente de desenvolvimento. Aprendo rapidamente novas tecnologias e linguagens graças à minha sólida base em programação. Sou venezuelano, residindo no Brasil, buscando novas oportunidades de crescimento profissional.</p>",
+    "bio": "<p class='text-lg py-2 leading-8 text-gray-800 dark:text-gray-200'>Sou um programador com experiência em <strong>PHP</strong>, <strong>Laravel</strong> e <strong>Python</strong>, <strong>Django</strong>. Domino <strong>Docker</strong> para gerenciar aplicativos em VPS, bancos de dados como <strong>MySQL</strong>, e o desenvolvimento de <strong>APIs REST</strong> e front-end com <strong>React</strong>. Uso <strong>Linux</strong> e <strong>Neovim</strong> como meu ambiente principal. Minha capacidade de adaptação me permite aprender novas tecnologias rapidamente. Como venezuelano no Brasil, busco novos desafios para continuar crescendo profissionalmente.</p>",
     "resume": "Curriculo",
     "A Timeout Occurred": "Ocorreu Um Tempo Limite",
     "Accepted": "Aceito",
