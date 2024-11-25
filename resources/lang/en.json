@@ -1,5 +1,5 @@
 {
-    "title": "Web Developer Jr.",
+    "title": "Web Developer",
     "about_me": "About Me",
     "derechos_r": "All rights reserved by",
     "download": "Download",
@@ -17,7 +17,7 @@
     "eficient": "Efficient",
     "speed_a": "Fast Learning",
     "nombre": "Migbert Yanez Caña",
-    "bio": "<p class='text-lg py-2 leading-8 text-gray-800 dark:text-gray-200'>I am a programmer with experience in <strong>PHP</strong> and <strong>Laravel</strong> (Livewire), proficient in <strong>Docker</strong> for VPS, and knowledgeable in <strong>MySQL</strong> and <strong>React</strong>. I use <strong>Linux</strong> and <strong>Neovim</strong> as my development environment. I quickly learn new technologies and languages thanks to my strong foundation in programming. I'm a Venezuelan residing in Brazil, seeking new opportunities for professional growth.</p>",
+    "bio": "<p class='text-lg py-2 leading-8 text-gray-800 dark:text-gray-200'>I am a programmer with experience in <strong>PHP</strong>, <strong>Laravel</strong>, and <strong>Python</strong>, <strong>Django</strong>. I am skilled in <strong>Docker</strong> for managing applications on VPS, databases like <strong>MySQL</strong>, and developing <strong>REST APIs</strong> and front-end with <strong>React</strong>. I use <strong>Linux</strong> and <strong>Neovim</strong> as my main environment. My adaptability allows me to quickly learn new technologies. As a Venezuelan in Brazil, I am looking for new challenges to continue growing professionally.</p>",
     "resume": "Resume",
     "A Timeout Occurred": "A Timeout Occurred",
     "Accepted": "Accepted",

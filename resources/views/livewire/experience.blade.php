@@ -22,6 +22,10 @@
                     <span class="text-gray-700">PHP y MySql</span>
                 </li>
                 <li class="flex items-center">
+                    <i class="fa-brands fa-python text-gray-900 mr-2"></i>
+                    <span class="text-gray-700">Python y Django</span>
+                </li>
+                <li class="flex items-center">
                     <i class="fa-brands fa-laravel text-gray-900 mr-2"></i>
                     <span class="text-gray-700">Laravel</span>
                 </li>
