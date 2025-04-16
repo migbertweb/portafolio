@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           source: "./"
-          target: "/home/migbert/www/laravel"
+          target: "/root/www/laravel"
 
       - name: Ejecutar comandos remoto via SSH
         uses: appleboy/ssh-action@v1.0.3

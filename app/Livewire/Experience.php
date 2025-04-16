@@ -7,10 +7,12 @@ use Livewire\Component;
 
 class Experience extends Component
 {
+    private $name;
+
     /**
      * @return View
      */
-    public function render()
+    public function render(): View
     {
         return view('livewire.experience');
     }
