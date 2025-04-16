@@ -33,11 +33,9 @@ jobs:
           script_stop: true
           script: |
             cd www/laravel/
-			sudo chown -R www-data:www-data .
-		    sudo chgrp -R www-data storage bootstrap/cache
-      		sudo chmod -R ug+rwx storage bootstrap/cache
-      		mkdir -p storage/framework/{cache,sessions,views}
-      		mkdir -p storage/logs
+            sudo chown -R www-data:www-data .
+            sudo chgrp -R www-data storage bootstrap/cache
+            sudo chmod -R ug+rwx storage bootstrap/cache
             unzip -p -P ${{ secrets.ZIP_PASS }} env.zip .env.production > .env
             docker exec app bash -c "composer install --no-dev --no-progress -a"
             docker exec app bash -c "npm install"
