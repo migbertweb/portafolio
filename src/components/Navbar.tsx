@@ -6,6 +6,8 @@ import { useStore } from '../store/useStore';
 import { LanguageSelector } from './LanguageSelector';
 
 import { ThemeToggle } from './ThemeToggle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 const navItems = [
   { id: 'about', labelKey: 'nav.about' },
@@ -34,8 +36,8 @@ export const Navbar: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-40 px-6 py-4 flex justify-between items-center glass-panel m-4 rounded-2xl border-white/5"
     >
-      <div className="bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent font-black text-2xl tracking-tighter">
-        MIGBERT<span className="text-[var(--color-text)]">.DEV</span>
+      <div className="bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent font-black text-2xl tracking-tighter items-center flex gap-2">
+        MIGBERTWEB<span className="text-[var(--color-text)] flex items-center"><FontAwesomeIcon icon={faCode} /></span>
       </div>
 
       <div className="hidden md:flex items-center gap-8">
