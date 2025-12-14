@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+# Portfolio - Migbert Yanez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es mi portafolio profesional, diseñado para mostrar mis habilidades, experiencia y proyectos. Está construido con tecnologías modernas de desarrollo web, enfocándose en el rendimiento, la accesibilidad y una estética moderna.
 
-Currently, two official plugins are available:
+## 👨‍💻 Perfil Profesional
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Desarrollador Full Stack** con formación en Ciencias de la Computación y más de 5 años de experiencia en el ciclo completo de desarrollo de software.
+Especializado en crear aplicaciones web escalables utilizando PHP (Laravel), Python (Django) y React.
+Cuento con sólida experiencia en entornos DevOps, implementando soluciones con Docker, Kubernetes y pipelines de CI/CD.
 
-## Expanding the ESLint configuration
+## 🚀 Habilidades Técnicas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React, JavaScript, HTML5/CSS3, Tailwind CSS
+- **Backend:** PHP (Laravel), Python (Django), Node.js
+- **DevOps:** Docker, Kubernetes, CI/CD, Linux VPS
+- **Base de Datos:** MySQL, PostgreSQL, Redis
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💼 Experiencia Laboral
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Analista Desarrollador Jr. | TODoca, C.A.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+_Enero 2018 – Mayo 2020_
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Integración de APIs de terceros (pagos, autenticación).
+- Migración exitosa de servidores físicos a VPS Linux.
+- Mantenimiento y soporte técnico.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Analista Integral de Proyectos | CVG Alcasa
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+_Mayo 2012 – Noviembre 2018_
+
+- Levantamiento de requisitos y definición de procesos.
+- Ejecución de proyectos corporativos y gestión de recursos.
+
+## 🛠️ Tecnologías del Proyecto
+
+Este portafolio ha sido desarrollado utilizando:
+
+- **[React](https://react.dev/)**: Librería principal de UI.
+- **[TypeScript](https://www.typescriptlang.org/)**: Tipado estático para código robusto.
+- **[Vite](https://vitejs.dev/)**: Entorno de desarrollo ultrarrápido.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework de utilidades para estilos.
+- **[Framer Motion](https://www.framer.com/motion/)**: Para animaciones fluidas y complejas.
+- **[Zustand](https://github.com/pmndrs/zustand)**: Gestión de estado global ligera (utilizado para el tema y el idioma).
+- **[i18next](https://www.i18next.com/)**: Internacionalización (Soporte para Español, Inglés y Portugués).
+- **[Lucide React](https://lucide.dev/)**: Iconografía moderna.
+
+## 📦 Instalación y Uso
+
+1.  **Clonar el repositorio**
+
+    ```bash
+    git clone https://github.com/tu-usuario/portfolio.git
+    cd portfolio
+    ```
+
+2.  **Instalar dependencias**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar servidor de desarrollo**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Construir para producción**
+    ```bash
+    npm run build
+    ```
+
+## 🎨 Características
+
+- **Diseño Responsivo**: Adaptado a móviles y escritorio.
+- **Multi-idioma**: Cambio dinámico entre Español, Inglés y Portugués.
+- **Modo Oscuro/Claro**: Tema adaptable con detección de preferencia del sistema.
+- **Animaciones**: Transiciones suaves y efectos visuales atractivos.
+
+---
+
+© 2025 Migbert Yanez.
