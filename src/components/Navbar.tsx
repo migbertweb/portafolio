@@ -12,6 +12,8 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 const navItems = [
   { id: 'about', labelKey: 'nav.about' },
   { id: 'experience', labelKey: 'nav.experience' },
+  { id: 'youtube', labelKey: 'nav.youtube' },
+  { id: 'github', labelKey: 'nav.github' },
   { id: 'skills', labelKey: 'nav.skills' },
   { id: 'contact', labelKey: 'nav.contact' },
 ];

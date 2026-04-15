@@ -4,11 +4,20 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Section } from './components/Section';
 import { ProfileImage } from './components/ProfileImage';
+import { YoutubeCarousel } from './components/YoutubeCarousel';
+import { GitHubRepos } from './components/GitHubRepos';
 import { useStore } from './store/useStore';
 import { Github, Linkedin, Mail, Download, Code, Server, Terminal, Database } from 'lucide-react';
 import cvEs from './assets/Curriculum-es.pdf';
 import cvEn from './assets/Curriculum-en.pdf';
 import cvPt from './assets/Curriculum-pt.pdf';
+
+interface Job {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+}
 
 function App() {
   const { t } = useTranslation();
@@ -31,8 +40,8 @@ function App() {
   // Intersection Observer to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'experience', 'skills', 'contact'];
-      const scrollPosition = window.scrollY + 300; // Offset
+      const sections = ['about', 'experience', 'youtube', 'github', 'skills', 'contact'];
+      const scrollPosition = window.scrollY + 300;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -94,7 +103,7 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6"
+              className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6 leading-tight"
             >
               Migbert Yanez
             </motion.h1>
@@ -150,7 +159,7 @@ function App() {
         <div className="space-y-8 relative">
           <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-neon-blue to-purple-900/0"></div>
           
-          {(t('experience.jobs', { returnObjects: true }) as any[]).map((job, index) => (
+          {(t('experience.jobs', { returnObjects: true }) as Job[]).map((job, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -175,6 +184,22 @@ function App() {
             </motion.div>
           ))}
         </div>
+      </Section>
+
+      {/* YouTube Videos Section */}
+      <Section id="youtube" title={t('youtube.title')}>
+        <p className="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+          {t('youtube.description')}
+        </p>
+        <YoutubeCarousel />
+      </Section>
+
+      {/* GitHub Repos Section */}
+      <Section id="github" title={t('github.title')}>
+        <p className="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+          {t('github.description')}
+        </p>
+        <GitHubRepos />
       </Section>
 
       {/* Skills Section */}
