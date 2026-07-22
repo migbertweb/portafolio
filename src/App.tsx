@@ -125,6 +125,18 @@ function App() {
               {t('about.content')}
             </motion.p>
             
+            {/* Freelance CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55 }}
+              className="mb-6"
+            >
+              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-neon-blue/20 to-neon-purple/20 border border-neon-blue/30 text-neon-blue text-sm font-mono mb-3">
+                {t('contact.cta_subtitle')}
+              </span>
+            </motion.div>
+
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -239,10 +251,44 @@ function App() {
       {/* Contact Section */}
       <Section id="contact" title={t('nav.contact')}>
          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-xl mb-12 text-gray-400">
+            {/* Availability badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <span className="inline-block px-5 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-mono">
+                {t('contact.available')}
+              </span>
+            </motion.div>
+
+            <p className="text-xl mb-8 text-gray-400">
               {t('contact.text')}
             </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+               <a 
+                  href="mailto:migbert.yanez@gmail.com?subject=Vamos%20conversar%20-%20Freelance"
+                  className="px-8 py-3 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold tracking-wide hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] transition-shadow flex items-center gap-2"
+               >
+                  <Mail size={18} />
+                  {t('contact.schedule')}
+               </a>
+               
+               <a 
+                  href="https://www.upwork.com/freelancers/~your_upwork_id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 rounded-full border border-white/20 hover:border-green-400 hover:text-green-400 transition-colors flex items-center gap-2"
+               >
+                  <span className="text-lg font-bold">U</span>
+                  {t('contact.upwork')}
+               </a>
+            </div>
             
+            {/* Social Icons */}
             <div className="flex justify-center gap-8">
                <a href="mailto:migbert.yanez@gmail.com" className="group">
                  <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center group-hover:bg-neon-blue/20 transition-all">
@@ -263,6 +309,13 @@ function App() {
                     <Github size={32} className="text-white group-hover:text-neon-blue" />
                  </div>
                  <span className="block mt-2 text-sm text-gray-400 group-hover:text-white">GitHub</span>
+               </a>
+
+               <a href="https://wa.me/5547997470887" target="_blank" rel="noopener noreferrer" className="group">
+                 <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center group-hover:bg-green-500/20 transition-all">
+                    <span className="text-3xl text-white group-hover:text-green-400">📱</span>
+                 </div>
+                 <span className="block mt-2 text-sm text-gray-400 group-hover:text-white">WhatsApp</span>
                </a>
             </div>
          </div>
