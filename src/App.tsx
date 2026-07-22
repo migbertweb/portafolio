@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Section } from './components/Section';
 import { ProfileImage } from './components/ProfileImage';
 import { FeaturedProjects } from './components/FeaturedProjects';
+import { StatsBar } from './components/StatsBar';
 import { YoutubeCarousel } from './components/YoutubeCarousel';
 import { GitHubRepos } from './components/GitHubRepos';
 import { useStore } from './store/useStore';
@@ -166,6 +167,9 @@ function App() {
           </div>
         </div>
       </Section>
+
+      {/* Stats Bar */}
+      <StatsBar />
 
       {/* Featured Projects Section */}
       <Section id="projects" title={t('projects.title')}>

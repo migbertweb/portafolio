@@ -57,6 +57,12 @@ const pt = {
       title: 'Meus Vídeos',
       description: 'Conteúdo sobre Linux, Docker, Kubernetes e mais no meu canal @MigbertonLinux',
     },
+    stats: {
+      years: '5+ anos',
+      projects: '10+ projetos',
+      technologies: '15+ tecnologias',
+      clients: 'Clientes satisfeitos'
+    },
     github: {
       title: 'Repositórios em Destaque',
       description: 'Alguns dos meus projetos mais importantes no GitHub',

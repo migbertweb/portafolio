@@ -57,6 +57,12 @@ const en = {
       title: 'My Videos',
       description: 'Content about Linux, Docker, Kubernetes and more on my channel @MigbertonLinux',
     },
+    stats: {
+      years: '5+ years',
+      projects: '10+ projects',
+      technologies: '15+ technologies',
+      clients: 'Satisfied clients'
+    },
     github: {
       title: 'Featured Repositories',
       description: 'Some of my most important projects on GitHub',
