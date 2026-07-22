@@ -6,6 +6,8 @@ import { Section } from './components/Section';
 import { ProfileImage } from './components/ProfileImage';
 import { FeaturedProjects } from './components/FeaturedProjects';
 import { StatsBar } from './components/StatsBar';
+import { CursorFollower } from './components/CursorFollower';
+import { MouseGlow } from './components/MouseGlow';
 import { YoutubeCarousel } from './components/YoutubeCarousel';
 import { GitHubRepos } from './components/GitHubRepos';
 import { useStore } from './store/useStore';
@@ -96,6 +98,10 @@ function App() {
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-neon-blue to-neon-purple origin-left z-50"
         style={{ scaleX }}
       />
+
+      {/* Mouse effects */}
+      <CursorFollower />
+      <MouseGlow />
 
       {/* Hero / About Section */}
       <Section id="about" className="pt-32">
