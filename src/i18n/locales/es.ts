@@ -96,7 +96,12 @@ const es = {
     },
     contact: {
       text: 'Estoy siempre abierto a nuevos desafíos y oportunidades. ¡Hablemos!',
-      footer: '© 2025 Migbert Yanez. Construido con React y Tailwind.'
+      available: '📌 Disponible para proyectos freelance — 20-30h/semana',
+      schedule: 'Agendar Conversación',
+      upwork: 'Disponible en Upwork',
+      footer: '© 2025 Migbert Yanez. Construido con React y Tailwind.',
+      cta_title: 'Transforma tu idea en software funcionando',
+      cta_subtitle: 'Disponible para proyectos freelance'
     }
   },
 };
