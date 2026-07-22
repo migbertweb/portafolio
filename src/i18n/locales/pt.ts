@@ -10,34 +10,28 @@ const pt = {
     },
     hero: {
       role: 'Desenvolvedor Full Stack',
-      description: 'Especializado em criar aplicações web escaláveis com PHP/Laravel, Python/Django e React.',
+      description: 'Especializado em criar aplicações web escaláveis, dashboards em tempo real, sistemas de automação e soluções IoT com Python, JavaScript, PHP e React.',
       download_cv: 'Baixar CV',
       contact_me: 'Contatar',
     },
     about: {
       title: 'Sobre Mim',
-      content: 'Desenvolvedor Full Stack com formação em Ciência da Computação e mais de 10 anos de experiência no ciclo completo de desenvolvimento de software. Atuo em ambientes DevOps utilizando Docker, Kubernetes e pipelines de CI/CD. Minha passagem pelo setor industrial fortaleceu minha adaptabilidade e resolução prática de problemas.',
+      content: 'Desenvolvedor Full Stack formado em Ciência da Computação com mais de 5 anos de experiência no ciclo completo de desenvolvimento de software. Especializado na construção de aplicações web escaláveis, dashboards em tempo real, sistemas de automação e soluções IoT. Combino fundamentos técnicos sólidos (Python, JavaScript, PHP) com práticas DevOps (Docker, CI/CD, administração Linux) e experiência em sistemas embarcados (ESP32). Focado em criar software confiável que resolve problemas reais de negócio.',
     },
     experience: {
       title: 'Experiência Profissional',
       jobs: [
         {
-          role: 'Auxiliar de Produção I',
-          company: 'FRANKLIN ELECTRIC – Araquari, SC',
-          period: '02/2025 – 04/2026',
-          description: 'Atuação nos setores de moldagem, preparação de areia e acabamento. Operação de equipamentos para movimentação de cargas (jacaré manual e elétrico) e utilização de talha elétrica.',
-        },
-        {
-          role: 'Esmerilhador',
-          company: 'TUPY S/A – Joinville, SC',
-          period: '02/2023 – 03/2025',
-          description: 'Atuação no setor de qualidade/acabamento, realizando verificação e acabamento de peças. Operação de talha pneumática e manuseio de ferramentas diversificadas. Esta experiência reforçou competências de resolução prática de problemas, trabalho sob pressão e adaptabilidade em ambiente dinâmico.',
+          role: 'Freelancer',
+          company: 'Migbertweb Desenvolvimento – Joinville, SC',
+          period: '2024 – Presente',
+          description: 'Desenvolvimento Full Stack de aplicações web, dashboards em tempo real e soluções IoT. Criação de sistemas de gestão (WorkApp), automação de processos e infraestrutura DevOps com Docker e CI/CD. Deploy automatizado com Dokploy. Gestão de projetos freelance com entrega contínua e comunicação direta com clientes.',
         },
         {
           role: 'Analista Desenvolvedor Jr.',
           company: 'TODoca, C.A. – Caracas, VE',
           period: 'Jan 2018 – Mai 2020',
-          description: 'Integração de APIs de terceiros para serviços de pagamento e autenticação. Migração bem-sucedida de servidor físico para infraestrutura VPS com Linux. Execução de suporte técnico e manutenção corretiva.',
+          description: 'Migração bem-sucedida de servidor físico para infraestrutura VPS Linux — melhoria de ~40% na confiabilidade do sistema e redução de custos de manutenção. Integração de APIs de terceiros (pagamento, autenticação). Suporte técnico, correção de bugs e garantia de alta disponibilidade da plataforma. Manutenção e otimização de código legado com implementação de novas funcionalidades.',
         },
         {
           role: 'Analista Integral de Projetos',
@@ -46,10 +40,16 @@ const pt = {
           description: 'Atuação no levantamento de requisitos, definição de processos e execução de projetos corporativos. Realização de análises de viabilidade técnica e para alocação de recursos. Acompanhamento de cronogramas e suporte na gestão integrada de projetos.',
         },
         {
-          role: 'Analista de Matérias-Primas',
-          company: 'CVG Alcasa – Puerto Ordaz, VE',
-          period: 'Mai 2011 – Abr 2012',
-          description: 'Gestão de solicitações, controle de inventário e acompanhamento do recebimento de matérias-primas. Elaboração de análises de utilização e projeções de consumo para otimizar a disponibilidade de recursos.',
+          role: 'Auxiliar de Produção I',
+          company: 'FRANKLIN ELECTRIC – Araquari, SC',
+          period: '02/2025 – 04/2026',
+          description: 'Atuação nos setores de moldagem, preparação de areia e acabamento. Operação de equipamentos para movimentação de cargas.',
+        },
+        {
+          role: 'Esmerilhador',
+          company: 'TUPY S/A – Joinville, SC',
+          period: '02/2023 – 03/2025',
+          description: 'Atuação no setor de qualidade/acabamento, realizando verificação e acabamento de peças. Esta experiência reforçou competências de resolução prática de problemas e adaptabilidade em ambiente dinâmico.',
         }
       ]
     },

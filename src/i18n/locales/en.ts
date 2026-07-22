@@ -10,34 +10,28 @@ const en = {
     },
     hero: {
       role: 'Full Stack Developer',
-      description: 'Specialized in creating scalable web applications with PHP/Laravel, Python/Django and React.',
+      description: 'Specialized in scalable web apps, real-time dashboards, automation systems, and IoT solutions using Python, JavaScript, PHP, and React.',
       download_cv: 'Download CV',
       contact_me: 'Contact Me',
     },
     about: {
       title: 'About Me',
-      content: 'Full Stack Developer with a Computer Science degree and over 10 years of experience in the full software development lifecycle. I work in DevOps environments using Docker, Kubernetes, and CI/CD pipelines. My background in the industrial sector has strengthened my adaptability and practical problem-solving skills.',
+      content: 'Full Stack Developer with a Computer Science degree and over 5 years of experience in the full software development lifecycle. Specialized in building scalable web applications, real-time dashboards, automation systems, and IoT solutions. I combine solid technical fundamentals (Python, JavaScript, PHP) with DevOps practices (Docker, CI/CD, Linux administration) and embedded systems experience (ESP32). Focused on creating reliable software that solves real business problems.',
     },
     experience: {
       title: 'Professional Experience',
       jobs: [
         {
-          role: 'Production Assistant I',
-          company: 'FRANKLIN ELECTRIC – Araquari, SC',
-          period: '02/2025 – 04/2026',
-          description: 'Worked in molding, sand preparation, and finishing sectors. Operated equipment for load movement (manual and electric cart) and electric hoist.',
-        },
-        {
-          role: 'Grinder Operator',
-          company: 'TUPY S/A – Joinville, SC',
-          period: '02/2023 – 03/2025',
-          description: 'Worked in quality/finishing sector, performing piece verification and finishing. Operated pneumatic hoist and handled diverse tools. This experience strengthened practical problem-solving skills, working under pressure, and adaptability in dynamic environments.',
+          role: 'Freelancer',
+          company: 'Migbertweb Development – Joinville, SC',
+          period: '2024 – Present',
+          description: 'Full Stack development of web applications, real-time dashboards, and IoT solutions. Created management systems (WorkApp), process automation, and DevOps infrastructure with Docker and CI/CD. Automated deployment with Dokploy. Freelance project management with continuous delivery and direct client communication.',
         },
         {
           role: 'Jr. Analyst Developer',
           company: 'TODoca, C.A. – Caracas, VE',
           period: 'Jan 2018 – May 2020',
-          description: 'Integration of third-party APIs (payments, auth). Successful migration from physical servers to Linux VPS, improving performance and reliability. Maintenance, technical support, and bug fixing.',
+          description: 'Successful migration from physical servers to Linux VPS infrastructure — ~40% improvement in system reliability and reduced maintenance costs. Third-party API integration (payments, auth). Technical support, bug fixing, and high-availability platform maintenance. Legacy code optimization and new feature implementation.',
         },
         {
           role: 'Integral Project Analyst',
@@ -46,10 +40,16 @@ const en = {
           description: 'Requirements gathering, process definition, and execution of corporate projects. Technical feasibility analysis and resource management. Schedule tracking and support in integrated project management.',
         },
         {
-          role: 'Raw Materials Analyst',
-          company: 'CVG Alcasa – Puerto Ordaz, VE',
-          period: 'May 2011 – Apr 2012',
-          description: 'Request management, inventory control, and tracking of raw material receipt. Development of usage analysis and consumption projections to optimize resource availability.',
+          role: 'Production Assistant I',
+          company: 'FRANKLIN ELECTRIC – Araquari, SC',
+          period: '02/2025 – 04/2026',
+          description: 'Worked in molding, sand preparation, and finishing sectors. Operated equipment for load movement.',
+        },
+        {
+          role: 'Grinder Operator',
+          company: 'TUPY S/A – Joinville, SC',
+          period: '02/2023 – 03/2025',
+          description: 'Worked in quality/finishing sector, performing piece verification and finishing. This experience strengthened practical problem-solving skills and adaptability in dynamic environments.',
         }
       ]
     },
