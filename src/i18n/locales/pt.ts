@@ -61,6 +61,30 @@ const pt = {
       title: 'Repositórios em Destaque',
       description: 'Alguns dos meus projetos mais importantes no GitHub',
     },
+    projects: {
+      title: 'Projetos em Destaque',
+      view_project: 'Ver Projeto',
+      items: [
+        {
+          title: 'WorkApp — Gestão de Projetos Freelance',
+          description: 'Plataforma completa com kanban, gestão de clientes, orçamentos, faturas em PDF, analytics e upload drag-and-drop. 18 PRs mergeados, arquitetura limpa, design responsivo.',
+          stack: 'Express.js, React, SQLite, JWT, jsPDF',
+          results: '18 PRs mergeados, design responsivo (768px+)',
+        },
+        {
+          title: 'DeskMate — Monitoramento IoT Ambiental',
+          description: 'Sistema de monitoramento ambiental com firmware ESP32 (ESP-IDF + FreeRTOS), display ST7789, anel LED WS2812B e dashboard web em tempo real com WebSocket e MQTT.',
+          stack: 'ESP32-C3, Python, React, WebSocket, MQTT',
+          results: 'Comunicação bidirecional, firmware otimizado para baixo consumo',
+        },
+        {
+          title: 'Automação DevOps com Docker + CI/CD',
+          description: 'Pipelines CI/CD para múltiplas aplicações web com testes automatizados, build de containers e deploys zero-downtime. Infraestrutura como código com Docker Compose.',
+          stack: 'Docker, GitHub Actions, Linux, VPS, Dokploy',
+          results: 'Deploys sem downtime, ambientes reproduzíveis',
+        }
+      ]
+    },
     skills: {
       title: 'Habilidades Técnicas',
       categories: {

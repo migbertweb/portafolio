@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Section } from './components/Section';
 import { ProfileImage } from './components/ProfileImage';
+import { FeaturedProjects } from './components/FeaturedProjects';
 import { YoutubeCarousel } from './components/YoutubeCarousel';
 import { GitHubRepos } from './components/GitHubRepos';
 import { useStore } from './store/useStore';
@@ -40,7 +41,7 @@ function App() {
   // Intersection Observer to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'experience', 'youtube', 'github', 'skills', 'contact'];
+      const sections = ['about', 'projects', 'experience', 'youtube', 'github', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 300;
 
       for (const section of sections) {
@@ -152,6 +153,11 @@ function App() {
             <ProfileImage />
           </div>
         </div>
+      </Section>
+
+      {/* Featured Projects Section */}
+      <Section id="projects" title={t('projects.title')}>
+        <FeaturedProjects />
       </Section>
 
       {/* Experience Section */}
