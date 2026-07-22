@@ -61,6 +61,30 @@ const en = {
       title: 'Featured Repositories',
       description: 'Some of my most important projects on GitHub',
     },
+    projects: {
+      title: 'Featured Projects',
+      view_project: 'View Project',
+      items: [
+        {
+          title: 'WorkApp — Freelance Project Management',
+          description: 'Complete platform with kanban, client management, budgets, PDF invoices, analytics, and drag-and-drop uploads. 18 merged PRs, clean architecture, responsive design.',
+          stack: 'Express.js, React, SQLite, JWT, jsPDF',
+          results: '18 merged PRs, responsive design (768px+)',
+        },
+        {
+          title: 'DeskMate — Environmental IoT Monitor',
+          description: 'Environmental monitoring system with ESP32 firmware (ESP-IDF + FreeRTOS), ST7789 display, WS2812B LED ring, and real-time web dashboard via WebSocket and MQTT.',
+          stack: 'ESP32-C3, Python, React, WebSocket, MQTT',
+          results: 'Bidirectional communication, low-power firmware',
+        },
+        {
+          title: 'DevOps Automation with Docker + CI/CD',
+          description: 'CI/CD pipelines for multiple web applications with automated tests, container builds, and zero-downtime deployments. Infrastructure as code with Docker Compose.',
+          stack: 'Docker, GitHub Actions, Linux, VPS, Dokploy',
+          results: 'Zero-downtime deployments, reproducible environments',
+        }
+      ]
+    },
     skills: {
       title: 'Technical Skills',
       categories: {
