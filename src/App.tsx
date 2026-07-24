@@ -89,6 +89,20 @@ function App() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, [theme]);
 
+  // Dynamic SEO meta per locale
+  useEffect(() => {
+    document.title = `Migbert Yanez | ${t('hero.role')}`;
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', t('seo.description'));
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', t('seo.og_description'));
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', `Migbert Yanez | ${t('hero.role')}`);
+  }, [currentLanguage, t]);
+
   return (
     <div>
       <Navbar />
@@ -234,13 +248,17 @@ function App() {
       <Section id="skills" title={t('skills.title')}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
            {[
-             { title: "Frontend", icon: <Code size={40} className="text-neon-blue" />, skills: ["React", "JavaScript", "HTML5/CSS3", "Tailwind"] },
-             { title: "Backend", icon: <Server size={40} className="text-neon-purple" />, skills: ["PHP (Laravel)", "Python (Django)", "Node.js"] },
-             { title: "DevOps", icon: <Terminal size={40} className="text-green-400" />, skills: ["Docker", "Kubernetes", "CI/CD", "Linux VPS"] },
-             { title: "Database", icon: <Database size={40} className="text-yellow-400" />, skills: ["MySQL", "PostgreSQL", "Redis"] }
+             { title: t('skills.categories.frontend'), icon: <Code size={40} className="text-neon-blue" />, skills: ["React", "JavaScript", "HTML5/CSS3", "Tailwind"], accent: "border-neon-blue/30 text-neon-blue bg-neon-blue/10" },
+             { title: t('skills.categories.backend'), icon: <Server size={40} className="text-neon-purple" />, skills: ["PHP (Laravel)", "Python (Django)", "Node.js"], accent: "border-neon-purple/30 text-neon-purple bg-neon-purple/10" },
+             { title: t('skills.categories.devops'), icon: <Terminal size={40} className="text-green-400" />, skills: ["Docker", "Kubernetes", "CI/CD", "Linux VPS"], accent: "border-green-400/30 text-green-400 bg-green-400/10" },
+             { title: t('skills.categories.database'), icon: <Database size={40} className="text-yellow-400" />, skills: ["MySQL", "PostgreSQL", "Redis"], accent: "border-yellow-400/30 text-yellow-400 bg-yellow-400/10" }
            ].map((category, index) => (
              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
                 className="glass-panel p-6 flex flex-col items-center text-center hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-shadow"
              >
@@ -248,11 +266,13 @@ function App() {
                  {category.icon}
                </div>
                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
-               <ul className="space-y-2">
+               <div className="flex flex-wrap justify-center gap-2">
                  {category.skills.map(skill => (
-                   <li key={skill} className="text-gray-400 bg-white/5 px-3 py-1 rounded-full text-sm inline-block m-1">{skill}</li>
+                   <span key={skill} className={`px-3 py-1 rounded-full text-xs font-mono border ${category.accent}`}>
+                     {skill}
+                   </span>
                  ))}
-               </ul>
+               </div>
              </motion.div>
            ))}
         </div>
@@ -288,7 +308,7 @@ function App() {
                </a>
                
                <a 
-                  href="https://www.upwork.com/freelancers/~your_upwork_id"
+                  href="https://www.upwork.com/freelancers/~01d443f2b06423fe93"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-3 rounded-full border border-white/20 hover:border-green-400 hover:text-green-400 transition-colors flex items-center gap-2"

@@ -10,28 +10,30 @@ const projectColors = [
   'from-green-400 to-emerald-500',
 ];
 
+interface Project {
+  title: string;
+  description: string;
+  stack: string;
+  results: string;
+  url: string;
+}
+
 export const FeaturedProjects = () => {
   const { t } = useTranslation();
-  const items = t('projects.items', { returnObjects: true }) as {
-    title: string;
-    description: string;
-    stack: string;
-    results: string;
-  }[];
+  const items = t('projects.items', { returnObjects: true }) as Project[];
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
       {items.map((project, index) => {
         const Icon = projectIcons[index];
-        return (
+        const CardContent = (
           <motion.div
-            key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.15 }}
             whileHover={{ y: -8, scale: 1.02 }}
-            className="glass-panel p-6 hover:bg-white/5 hover:shadow-[0_0_30px_rgba(0,243,255,0.15)] transition-all group relative overflow-hidden"
+            className="glass-panel p-6 hover:bg-white/5 hover:shadow-[0_0_30px_rgba(0,243,255,0.15)] transition-all group relative overflow-hidden h-full"
           >
             {/* Gradient accent bar */}
             <div
@@ -83,6 +85,22 @@ export const FeaturedProjects = () => {
             </div>
           </motion.div>
         );
+
+        if (project.url) {
+          return (
+            <a
+              key={index}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block cursor-pointer"
+            >
+              {CardContent}
+            </a>
+          );
+        }
+
+        return <div key={index}>{CardContent}</div>;
       })}
     </div>
   );

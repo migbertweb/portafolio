@@ -7,10 +7,10 @@ export const StatsBar = () => {
   const { t } = useTranslation();
 
   const stats = [
-    { value: t('stats.years'), label: 'Experiência' },
-    { value: t('stats.projects'), label: 'Projetos' },
-    { value: t('stats.technologies'), label: 'Tecnologias' },
-    { value: t('stats.clients'), label: 'Clientes' },
+    { value: t('stats.years'), label: t('stats.label_years') },
+    { value: t('stats.projects'), label: t('stats.label_projects') },
+    { value: t('stats.technologies'), label: t('stats.label_technologies') },
+    { value: t('stats.clients'), label: t('stats.label_clients') },
   ];
 
   return (
