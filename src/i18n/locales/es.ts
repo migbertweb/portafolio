@@ -40,13 +40,13 @@ const es = {
           description: 'Levantamiento de requisitos, definición de procesos y ejecución de proyectos corporativos. Análisis de viabilidad técnica y gestión de recursos. Acompañamiento de cronogramas y soporte en gestión integrada de proyectos.',
         },
         {
-          role: 'Auxiliar de Produção I',
+          role: 'Auxiliar de Producción I',
           company: 'FRANKLIN ELECTRIC – Araquari, SC',
           period: '02/2025 – 04/2026',
           description: 'Actuación en los sectores de moldeo, preparación de arena y acabado. Operación de equipos para movimiento de cargas.',
         },
         {
-          role: 'Esmerilhador',
+          role: 'Esmerilador',
           company: 'TUPY S/A – Joinville, SC',
           period: '02/2023 – 03/2025',
           description: 'Actuación en el sector de calidad/acabado, realizando verificación y acabado de piezas. Esta experiencia reforzó competencias de resolución práctica de problemas y adaptabilidad en entorno dinámico.',
@@ -59,9 +59,13 @@ const es = {
     },
     stats: {
       years: '5+ años',
+      label_years: 'Experiencia',
       projects: '10+ proyectos',
+      label_projects: 'Proyectos',
       technologies: '15+ tecnologías',
-      clients: 'Clientes satisfechos'
+      label_technologies: 'Tecnologías',
+      clients: 'Clientes satisfechos',
+      label_clients: 'Clientes'
     },
     github: {
       title: 'Repositorios Destacados',
@@ -76,18 +80,21 @@ const es = {
           description: 'Plataforma completa con kanban, gestión de clientes, presupuestos, facturas en PDF, analytics y upload drag-and-drop. 18 PRs mergeados, arquitectura limpia, diseño responsivo.',
           stack: 'Express.js, React, SQLite, JWT, jsPDF',
           results: '18 PRs mergeados, diseño responsivo (768px+)',
+          url: 'https://workapp.migbertweb.xyz',
         },
         {
           title: 'DeskMate — Monitoreo IoT Ambiental',
           description: 'Sistema de monitoreo ambiental con firmware ESP32 (ESP-IDF + FreeRTOS), display ST7789, anillo LED WS2812B y dashboard web en tiempo real con WebSocket y MQTT.',
           stack: 'ESP32-C3, Python, React, WebSocket, MQTT',
           results: 'Comunicación bidireccional, firmware optimizado para bajo consumo',
+          url: 'https://github.com/migbertweb/deskmate-dashboard',
         },
         {
           title: 'Automatización DevOps con Docker + CI/CD',
           description: 'Pipelines CI/CD para múltiples aplicaciones web con tests automatizados, build de containers y deploys zero-downtime. Infraestructura como código con Docker Compose.',
           stack: 'Docker, GitHub Actions, Linux, VPS, Dokploy',
           results: 'Deploys sin downtime, entornos reproducibles',
+          url: 'https://github.com/migbertweb',
         }
       ]
     },
@@ -108,6 +115,10 @@ const es = {
       footer: '© 2025 Migbert Yanez. Construido con React y Tailwind.',
       cta_title: 'Transforma tu idea en software funcionando',
       cta_subtitle: 'Disponible para proyectos freelance'
+    },
+    seo: {
+      description: 'Desarrollador Full Stack especializado en React, Python, Docker e IoT. Creo aplicaciones web escalables, dashboards en tiempo real y soluciones IoT. Disponible para freelance.',
+      og_description: 'Desarrollador Full Stack especializado en React, Python, Docker e IoT. Creo aplicaciones web escalables y soluciones IoT.',
     }
   },
 };

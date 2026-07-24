@@ -59,9 +59,13 @@ const en = {
     },
     stats: {
       years: '5+ years',
+      label_years: 'Experience',
       projects: '10+ projects',
+      label_projects: 'Projects',
       technologies: '15+ technologies',
-      clients: 'Satisfied clients'
+      label_technologies: 'Technologies',
+      clients: 'Satisfied clients',
+      label_clients: 'Clients'
     },
     github: {
       title: 'Featured Repositories',
@@ -76,18 +80,21 @@ const en = {
           description: 'Complete platform with kanban, client management, budgets, PDF invoices, analytics, and drag-and-drop uploads. 18 merged PRs, clean architecture, responsive design.',
           stack: 'Express.js, React, SQLite, JWT, jsPDF',
           results: '18 merged PRs, responsive design (768px+)',
+          url: 'https://workapp.migbertweb.xyz',
         },
         {
           title: 'DeskMate — Environmental IoT Monitor',
           description: 'Environmental monitoring system with ESP32 firmware (ESP-IDF + FreeRTOS), ST7789 display, WS2812B LED ring, and real-time web dashboard via WebSocket and MQTT.',
           stack: 'ESP32-C3, Python, React, WebSocket, MQTT',
           results: 'Bidirectional communication, low-power firmware',
+          url: 'https://github.com/migbertweb/deskmate-dashboard',
         },
         {
           title: 'DevOps Automation with Docker + CI/CD',
           description: 'CI/CD pipelines for multiple web applications with automated tests, container builds, and zero-downtime deployments. Infrastructure as code with Docker Compose.',
           stack: 'Docker, GitHub Actions, Linux, VPS, Dokploy',
           results: 'Zero-downtime deployments, reproducible environments',
+          url: 'https://github.com/migbertweb',
         }
       ]
     },
@@ -108,6 +115,10 @@ const en = {
       footer: '© 2025 Migbert Yanez. Built with React & Tailwind.',
       cta_title: 'Turn your idea into working software',
       cta_subtitle: 'Available for freelance projects'
+    },
+    seo: {
+      description: 'Full Stack Developer specialized in React, Python, Docker, and IoT. I build scalable web applications, real-time dashboards, and IoT solutions. Available for freelance.',
+      og_description: 'Full Stack Developer specialized in React, Python, Docker, and IoT. I build scalable web applications and IoT solutions.',
     }
   },
 };

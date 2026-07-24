@@ -59,9 +59,13 @@ const pt = {
     },
     stats: {
       years: '5+ anos',
+      label_years: 'Experiência',
       projects: '10+ projetos',
+      label_projects: 'Projetos',
       technologies: '15+ tecnologias',
-      clients: 'Clientes satisfeitos'
+      label_technologies: 'Tecnologias',
+      clients: 'Clientes satisfeitos',
+      label_clients: 'Clientes'
     },
     github: {
       title: 'Repositórios em Destaque',
@@ -76,18 +80,21 @@ const pt = {
           description: 'Plataforma completa com kanban, gestão de clientes, orçamentos, faturas em PDF, analytics e upload drag-and-drop. 18 PRs mergeados, arquitetura limpa, design responsivo.',
           stack: 'Express.js, React, SQLite, JWT, jsPDF',
           results: '18 PRs mergeados, design responsivo (768px+)',
+          url: 'https://workapp.migbertweb.xyz',
         },
         {
           title: 'DeskMate — Monitoramento IoT Ambiental',
           description: 'Sistema de monitoramento ambiental com firmware ESP32 (ESP-IDF + FreeRTOS), display ST7789, anel LED WS2812B e dashboard web em tempo real com WebSocket e MQTT.',
           stack: 'ESP32-C3, Python, React, WebSocket, MQTT',
           results: 'Comunicação bidirecional, firmware otimizado para baixo consumo',
+          url: 'https://github.com/migbertweb/deskmate-dashboard',
         },
         {
           title: 'Automação DevOps com Docker + CI/CD',
           description: 'Pipelines CI/CD para múltiplas aplicações web com testes automatizados, build de containers e deploys zero-downtime. Infraestrutura como código com Docker Compose.',
           stack: 'Docker, GitHub Actions, Linux, VPS, Dokploy',
           results: 'Deploys sem downtime, ambientes reproduzíveis',
+          url: 'https://github.com/migbertweb',
         }
       ]
     },
@@ -108,6 +115,10 @@ const pt = {
       footer: '© 2025 Migbert Yanez. Construído com React e Tailwind.',
       cta_title: 'Transforme sua ideia em software funcionando',
       cta_subtitle: 'Disponível para projetos freelance'
+    },
+    seo: {
+      description: 'Desenvolvedor Full Stack especializado em React, Python, Docker e IoT. Crio aplicações web escaláveis, dashboards em tempo real e soluções IoT. Disponível para freelance.',
+      og_description: 'Desenvolvedor Full Stack especializado em React, Python, Docker e IoT. Crio aplicações web escaláveis e soluções IoT.',
     }
   },
 };
