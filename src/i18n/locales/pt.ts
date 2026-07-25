@@ -58,7 +58,7 @@ const pt = {
       description: 'Conteúdo sobre Linux, Docker, Kubernetes e mais no meu canal @MigbertonLinux',
     },
     stats: {
-      years: '5+ anos',
+      years: '10+ anos',
       label_years: 'Experiência',
       projects: '10+ projetos',
       label_projects: 'Projetos',

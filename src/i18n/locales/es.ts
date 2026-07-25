@@ -58,7 +58,7 @@ const es = {
       description: 'Contenido sobre Linux, Docker, Kubernetes y más en mi canal @MigbertonLinux',
     },
     stats: {
-      years: '5+ años',
+      years: '10+ años',
       label_years: 'Experiencia',
       projects: '10+ proyectos',
       label_projects: 'Proyectos',

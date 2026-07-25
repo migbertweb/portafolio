@@ -320,13 +320,6 @@ function App() {
             
             {/* Social Icons */}
             <div className="flex justify-center gap-8">
-               <a href="mailto:migbert.yanez@gmail.com" className="group">
-                 <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center group-hover:bg-neon-blue/20 transition-all">
-                    <Mail size={32} className="text-white group-hover:text-neon-blue" />
-                 </div>
-                 <span className="block mt-2 text-sm text-gray-400 group-hover:text-white">Email</span>
-               </a>
-               
                <a href="https://linkedin.com/in/migbert-yanez-cana" target="_blank" rel="noopener noreferrer" className="group">
                  <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center group-hover:bg-neon-blue/20 transition-all">
                     <Linkedin size={32} className="text-white group-hover:text-neon-blue" />
