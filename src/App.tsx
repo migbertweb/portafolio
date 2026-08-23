@@ -101,6 +101,10 @@ function App() {
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', `Migbert Yanez | ${t('hero.role')}`);
+
+    // Keep <html lang> in sync with active locale
+    const langMap: Record<string, string> = { pt: 'pt-BR', es: 'es', en: 'en' };
+    document.documentElement.lang = langMap[currentLanguage] || currentLanguage;
   }, [currentLanguage, t]);
 
   return (
