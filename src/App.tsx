@@ -10,17 +10,18 @@ import { CursorFollower } from './components/CursorFollower';
 import { MouseGlow } from './components/MouseGlow';
 import { YoutubeCarousel } from './components/YoutubeCarousel';
 import { GitHubRepos } from './components/GitHubRepos';
+import { OtherExperience } from './components/OtherExperience';
 import { useStore } from './store/useStore';
-import { Github, Linkedin, Mail, Download, Code, Server, Terminal, Database } from 'lucide-react';
-import cvEs from './assets/Curriculum-es.pdf';
-import cvEn from './assets/Curriculum-en.pdf';
-import cvPt from './assets/Curriculum-pt.pdf';
+import { Github, Linkedin, Mail, Download, Code, Server, Terminal, Database, Boxes, GitBranch } from 'lucide-react';
+import cvEs from './assets/curriculo-migbert-yanez-es.pdf';
+import cvEn from './assets/curriculo-migbert-yanez-en.pdf';
+import cvPt from './assets/curriculo-migbert-yanez.pdf';
 
 interface Job {
   role: string;
   company: string;
   period: string;
-  description: string;
+  bullets: string[];
 }
 
 function App() {
@@ -137,15 +138,31 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl text-neon-blue mb-6 font-mono"
+              className="text-2xl text-neon-blue mb-2 font-mono"
             >
               {t('hero.role')}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45 }}
+              className="text-sm text-gray-400 font-mono tracking-wide mb-5"
+            >
+              {t('hero.stack')}
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg leading-relaxed mb-8 max-w-lg"
+              className="text-xl leading-snug mb-4 max-w-lg font-medium"
+            >
+              {t('hero.subtitle')}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.52 }}
+              className="text-sm leading-relaxed mb-6 max-w-lg text-gray-400"
             >
               {t('about.content')}
             </motion.p>
@@ -168,22 +185,35 @@ function App() {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4"
             >
-              <button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold tracking-wide hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] transition-shadow"
-              >
-                {t('hero.contact_me')}
-              </button>
-              
               <a 
                 href={currentCv}
                 download={`Curriculum-Migbert-Yanez-${currentLanguage}.pdf`}
-                className="px-8 py-3 rounded-full border border-white/20 hover:border-neon-blue hover:text-neon-blue transition-colors flex items-center gap-2"
+                className="px-8 py-3 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold tracking-wide hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] transition-shadow flex items-center gap-2"
               >
                 <Download size={18} />
                 {t('hero.download_cv')}
               </a>
+
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3 rounded-full border border-white/20 hover:border-neon-blue hover:text-neon-blue transition-colors"
+              >
+                {t('hero.contact_me')}
+              </button>
             </motion.div>
+
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+              href="https://wa.me/5547997470887"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 text-sm text-gray-500 hover:text-green-400 transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              {t('hero.whatsapp')} →
+            </motion.a>
           </div>
           
           <div className="order-1 md:order-2 flex justify-center">
@@ -225,11 +255,20 @@ function App() {
                 </span>
                 <h3 className="text-2xl font-bold text-white mt-1">{job.role}</h3>
                 <h4 className="text-gray-400 mb-4">{job.company}</h4>
-                <p className="text-sm">{job.description}</p>
+                <ul className="space-y-3">
+                  {job.bullets.map((bullet, i) => (
+                    <li key={i} className="text-sm flex gap-3">
+                      <span className={`mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full ${index % 2 === 0 ? 'bg-neon-blue' : 'bg-neon-purple'}`} />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <OtherExperience />
       </Section>
 
       {/* YouTube Videos Section */}
@@ -250,35 +289,40 @@ function App() {
 
       {/* Skills Section */}
       <Section id="skills" title={t('skills.title')}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
            {[
-             { title: t('skills.categories.frontend'), icon: <Code size={40} className="text-neon-blue" />, skills: ["React", "JavaScript", "HTML5/CSS3", "Tailwind"], accent: "border-neon-blue/30 text-neon-blue bg-neon-blue/10" },
-             { title: t('skills.categories.backend'), icon: <Server size={40} className="text-neon-purple" />, skills: ["PHP (Laravel)", "Python (Django)", "Node.js"], accent: "border-neon-purple/30 text-neon-purple bg-neon-purple/10" },
-             { title: t('skills.categories.devops'), icon: <Terminal size={40} className="text-green-400" />, skills: ["Docker", "Kubernetes", "CI/CD", "Linux VPS"], accent: "border-green-400/30 text-green-400 bg-green-400/10" },
-             { title: t('skills.categories.database'), icon: <Database size={40} className="text-yellow-400" />, skills: ["MySQL", "PostgreSQL", "Redis"], accent: "border-yellow-400/30 text-yellow-400 bg-yellow-400/10" }
-           ].map((category, index) => (
+             { key: 'frontend', icon: <Code size={32} className="text-neon-blue" />, accent: 'border-neon-blue/30 text-neon-blue bg-neon-blue/10' },
+             { key: 'backend', icon: <Server size={32} className="text-neon-purple" />, accent: 'border-neon-purple/30 text-neon-purple bg-neon-purple/10' },
+             { key: 'devops', icon: <Terminal size={32} className="text-green-400" />, accent: 'border-green-400/30 text-green-400 bg-green-400/10' },
+             { key: 'database', icon: <Database size={32} className="text-yellow-400" />, accent: 'border-yellow-400/30 text-yellow-400 bg-yellow-400/10' },
+             { key: 'architecture', icon: <Boxes size={32} className="text-pink-400" />, accent: 'border-pink-400/30 text-pink-400 bg-pink-400/10' },
+             { key: 'process', icon: <GitBranch size={32} className="text-orange-400" />, accent: 'border-orange-400/30 text-orange-400 bg-orange-400/10' },
+           ].map((category, index) => {
+             const categorySkills = t(`skills.items.${category.key}`, { returnObjects: true }) as string[];
+             return (
              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="glass-panel p-6 flex flex-col items-center text-center hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-shadow"
-             >
-               <div className="mb-4 p-4 rounded-full bg-white/5">
-                 {category.icon}
-               </div>
-               <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
-               <div className="flex flex-wrap justify-center gap-2">
-                 {category.skills.map(skill => (
-                   <span key={skill} className={`px-3 py-1 rounded-full text-xs font-mono border ${category.accent}`}>
-                     {skill}
-                   </span>
-                 ))}
-               </div>
-             </motion.div>
-           ))}
+               key={index}
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: index * 0.1 }}
+               whileHover={{ y: -10 }}
+               className="glass-panel p-6 flex flex-col items-center text-center hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-shadow"
+            >
+              <div className="mb-4 p-4 rounded-full bg-white/5">
+                {category.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">{t(`skills.categories.${category.key}`)}</h3>
+              <div className="flex flex-wrap justify-center gap-2">
+                {categorySkills.map(skill => (
+                  <span key={skill} className={`px-3 py-1 rounded-full text-xs font-mono border ${category.accent}`}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+            );
+           })}
         </div>
       </Section>
 
